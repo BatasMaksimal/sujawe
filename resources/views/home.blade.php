@@ -1,5 +1,5 @@
 @extends('layouts.main')
 @section('container')
 @include('partials.navbar')
-    <h1>Halaman Awal</h1>
+    <h1>Halaman Dua</h1>
     @endsection
