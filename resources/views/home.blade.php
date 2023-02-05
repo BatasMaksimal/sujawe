@@ -10,7 +10,7 @@
     
 
     <link rel="stylesheet" href="{{asset('style.css')}}">
-    <title>Jevi Blog | {{ $title}}</title>
+    <title> | {{ $title}}</title>
   </head>
   <body>
   
