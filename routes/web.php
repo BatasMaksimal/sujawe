@@ -31,3 +31,5 @@ Route::get('/blog', function () {
         "title"=>"Posts"
     ]);
 });
+
+Route::resource('/catalogs''catalogsController');
