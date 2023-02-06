@@ -14,22 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/admin/home', function () {
-    return view('/admin/home',[
-        "title"=>"Home"
-    ]);
-});
-Route::get('/about', function () {
-    return view('about',[
-        "title"=>"About",
-        "name"=>" Javier",
-        "email"=>"sultan.javier@gmail.com",
-        "image"=>"sultan.jpg"
-    ]);
-});
-Route::get('/blog', function () {
-    return view('posts',[
-        "title"=>"Posts"
+    return view('admin.catalog',[
+        "title"=>"Sujawe inninawa"
     ]);
 });
 
-Route::resource('/catalogs''catalogsController');
+Route::get('/', function(){
+
+});
+// Route::get('/about', function () {
+//     return view('about',[
+//         "title"=>"About",
+//         "name"=>" Javier",
+//         "email"=>"sultan.javier@gmail.com",
+//         "image"=>"sultan.jpg"
+//     ]);
+// });
+// Route::get('/blog', function () {
+//     return view('posts',[
+//         "title"=>"Posts"
+//     ]);
+// });
+
+Route::resource('/catalog''catalogController');
