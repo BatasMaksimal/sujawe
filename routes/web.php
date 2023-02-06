@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/admin/home', function () {
-    return view('admin.catalog',[
+    return view('admin.main',[
         "title"=>"Sujawe inninawa"
     ]);
 });
@@ -36,4 +36,4 @@ Route::get('/', function(){
 //     ]);
 // });
 
-Route::resource('/catalogs''catalogsController');
+// Route::resource('/catalogs''catalogsController');
