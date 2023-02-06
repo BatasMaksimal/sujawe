@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home',[
+Route::get('/admin/home', function () {
+    return view('/admin/home',[
         "title"=>"Home"
     ]);
 });
