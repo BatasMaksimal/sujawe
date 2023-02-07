@@ -27,9 +27,9 @@
           </div>
           <div class="col-lg-7 px-5 pt-5">
             <div class="mb-3">
-                <img src="../user/images/Roc_Nation_logo.png" alt="" width="70%">
+                <img src="{{asset('img/logo.jpg')}}" alt="" width="70%">
             </div>
-            <h3>Login Admin</h3>
+            <h3 class="login">Login Admin</h3>
             <form method="POST" action="proses_login.php">
               <div class="form-row">
                 <div class="col-lg-7">
