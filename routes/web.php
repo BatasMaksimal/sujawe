@@ -36,4 +36,4 @@ Route::get('/', function(){
 //     ]);
 // });
 
-Route::resource('/catalog''catalogController');
+Route::resource('/catalogs''catalogsController');
