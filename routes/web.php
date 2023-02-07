@@ -16,7 +16,7 @@ use  App\Http\Controllers\CatalogsController;
 */
 
 Route::get('/admin/home', function () {
-    return view('admin.catalog',[
+    return view('admin.main',[
         "title"=>"Sujawe inninawa"
     ]);
 });
