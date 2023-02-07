@@ -38,4 +38,4 @@ Route::get('/', function(){
 //     ]);
 // });
 
-Route::resource('/catalogs', CatalogsController::class);
+Route::resource('/admin/catalogs', CatalogsController::class);
