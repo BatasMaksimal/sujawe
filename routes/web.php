@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use  App\Http\Controllers\CatalogsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +38,4 @@ Route::get('/', function(){
 //     ]);
 // });
 
-Route::resource('/catalogs''catalogsController');
+Route::resource('/catalogs', CatalogsController::class);
