@@ -19,6 +19,7 @@
 <body>
 
 
+
 <section class="Form my-1 mx-5">
       <div class="container">
         <div class="row content g-0">
@@ -35,7 +36,7 @@
                 <div class="col-lg-7">
                   <!-- Username -->
                   <input type="text" class="form-control my-3 p-3" name="username" placeholder="Username" required>
-<!--                    <span class="fa-solid fa-lock"></span>-->
+    <!--<span class="fa-solid fa-lock"></span>-->
                 </div>
               </div>
               <div class="form-row">

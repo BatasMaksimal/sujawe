@@ -15,15 +15,20 @@ use  App\Http\Controllers\CatalogsController;
 |
 */
 
-Route::get('/admin/home', function () {
-    return view('admin.main',[
+Route::get('/admin/login', function () {
+    return view('admin.login',[
         "title"=>"Sujawe inninawa"
     ]);
 });
 
-Route::get('/', function(){
-
+Route::get('/admin/post_blog', function () {
+    return view('admin.post_blog',[
+        "title"=>"Sujawe inninawa"
+    ]);
 });
+// Route::get('/', function(){
+//     return view('')
+// });
 // Route::get('/about', function () {
 //     return view('about',[
 //         "title"=>"About",
@@ -36,6 +41,6 @@ Route::get('/', function(){
 //     return view('posts',[
 //         "title"=>"Posts"
 //     ]);
-// });
+// ]
 
 Route::resource('/admin/catalogs', CatalogsController::class);
