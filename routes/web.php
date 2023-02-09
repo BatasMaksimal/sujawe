@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-use  App\Http\Controllers\CatalogsController;
+use App\Http\Controllers\CatalogsController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +24,12 @@ Route::get('/admin/login', function () {
 Route::get('/admin/post_blog', function () {
     return view('admin.post_blog',[
         "title"=>"Sujawe inninawa"
+    ]);
+});
+
+Route::get('/admin/home', function () {
+    return view('admin.post_blog',[
+        "title"=>"Shone pager"
     ]);
 });
 // Route::get('/', function(){
@@ -48,5 +54,6 @@ Route::resource('/admin/catalogs', CatalogsController::class);
 Route::get('password', function(){
     return Hash::make('admin');
 });
-Route::resource('/login', CatalogsController::class);
+
+//Route::resource('/login', LoginController::class);
 Route::post('login',[LoginController::class, 'login']);

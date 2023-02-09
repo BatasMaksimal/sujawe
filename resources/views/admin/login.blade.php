@@ -31,7 +31,8 @@
                 <img src="{{asset('img/logo.jpg')}}" alt="" width="70%">
             </div>
             <h3 class="login">Login Admin</h3>
-            <form method="POST" action="proses_login.php">
+            <form method="POST" action="/login">
+              @csrf
               <div class="form-row">
                 <div class="col-lg-7">
                   <!-- Username -->

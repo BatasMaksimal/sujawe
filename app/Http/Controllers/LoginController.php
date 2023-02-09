@@ -1,29 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class LoginController extends Controller{
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        public function login(Request $request){
-            $username = $request->get('username');
-            $password = $request->get('password');
-    
-            if(Auth::attempt([
-                'username'=>$username,
-                'password'=>$password
-            ])){
-                return redirect('/admin/home');
-            }
+    public function login (Request $request){
+        $username = $request->get('username');
+        $password = $request->get('password');
+
+        if(Auth::attempt([
+            'username'=>$username,
+            'password'=>$password
+        ])){
+            return redirect('/admin/home');
+        }
     }
+     
 
     /**
      * Show the form for creating a new resource.
