@@ -14,10 +14,25 @@
     <link rel="stylesheet" href="{{asset('css/stylesheet_login.css')}}">
     <link rel="stylesheet" href="{{asset('css/eye.css')}}">
     
+    <script>
+        const password = document.querySelector("input");
+        const btn_show = document.querySelector("span");
+        btn_show.addEventListener("click", function(){
+          if(password.type === "password"){
+            password.type = "text";
+            btn_show.classList.add("hide");
+          }
+          else {
+            password.type = "password";
+            btn_show.classList.add("hide");
+          }
+        }) 
+
+    </script>
+
 </head>
 
 <body>
-
 
 
 <section class="Form my-1 mx-5">
@@ -67,7 +82,7 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="js/hide.js"></script>
-
+    <script src="{{asset('js/hide.js')}}"></script>
 </body>
 
 </html>

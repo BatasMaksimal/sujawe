@@ -13,16 +13,13 @@
     <link rel="stylesheet" href="{{asset('css/stylesheet_tampil.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    
-    
-</head>
-
 
 <!-- content -->
 <body>
 <div class="container my-3">
         <div class="card">
             <div class="card-header">
-                <h3 class="text-center mt-2 mb-3">Data Produk<h3>
+                <h3 class="text-center mt-2 mb-3">POST BLOG<h3>
                 <form action="tampil_produk.php" method="post">
                     <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian">
                 </form>
@@ -32,13 +29,10 @@
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nama Produk</th>
-                            <th scope="col">Deskripsi</th>
-                            <th scope="col">Kategori</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Merek</th>
-                            <th scope="col">Harga</th>
-                            <th scope="col">Foto</th>
+                            <th scope="col">JUDUL</th>
+                            <th scope="col">IMAGE</th>
+                            <th scope="col">DESKIRPSI</th>
+                            <th scope="col">HARGA</th>
                             <th scope="col" width="200px">Aksi</th>
                         </tr>
                     </thead>
@@ -50,6 +44,7 @@
     </div>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
