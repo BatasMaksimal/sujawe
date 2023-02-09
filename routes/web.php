@@ -32,6 +32,13 @@ Route::get('/admin/home', function () {
         "title"=>"Shone pager"
     ]);
 });
+
+
+Route::get('/admin/tambah_post', function () {
+    return view('admin.tambah_post.tambah',[
+        "title"=>"Sujawe inninawa"
+    ]);
+});
 // Route::get('/', function(){
 //     return view('')
 // });
