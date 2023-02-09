@@ -39,3 +39,9 @@ Route::get('/', function(){
 // });
 
 Route::resource('/admin/catalogs', CatalogsController::class);
+
+Route::get('password', function(){
+    return Hash::make('admin');
+});
+Route::resource('/login', CatalogsController::class);
+Route::post('login',[LoginController::class, 'login']);

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CatalogsController extends Controller
-{
+class LoginController extends Controller
+
     /**
      * Display a listing of the resource.
      *
@@ -13,10 +13,16 @@ class CatalogsController extends Controller
      */
     public function index()
     {
-        return view('admin.catalog');
-    }
-
+        public function login(Request $request){
+            $username = $request->get('username');
+            $password = $request->get('password');
     
+            if(Auth::attempt([
+                'username'=>$username,
+                'password'=>$password
+            ])){
+                return redirect('/admin/home');
+            }
     }
 
     /**
