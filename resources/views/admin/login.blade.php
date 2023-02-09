@@ -19,6 +19,7 @@
 <body>
 
 
+
 <section class="Form my-1 mx-5">
       <div class="container">
         <div class="row content g-0">
@@ -27,15 +28,15 @@
           </div>
           <div class="col-lg-7 px-5 pt-5">
             <div class="mb-3">
-                <img src="../user/images/Roc_Nation_logo.png" alt="" width="70%">
+                <img src="{{asset('img/logo.jpg')}}" alt="" width="70%">
             </div>
-            <h3>Login Admin</h3>
+            <h3 class="login">Login Admin</h3>
             <form method="POST" action="proses_login.php">
               <div class="form-row">
                 <div class="col-lg-7">
                   <!-- Username -->
                   <input type="text" class="form-control my-3 p-3" name="username" placeholder="Username" required>
-<!--                    <span class="fa-solid fa-lock"></span>-->
+    <!--<span class="fa-solid fa-lock"></span>-->
                 </div>
               </div>
               <div class="form-row">
