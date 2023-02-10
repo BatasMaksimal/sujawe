@@ -43,7 +43,7 @@
                     </thead>
                   
                 </table>
-                <a href="tambah_produk.php"><button class="btn1">Tambah Produk</button></a>
+                <a href="{{route('admin.tambah_post.tambah')}}"><button class="btn1">Tambah Produk</button></a>
             </div>
         </div>
     </div>

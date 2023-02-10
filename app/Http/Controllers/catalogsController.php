@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catalogs;
 use Illuminate\Http\Request;
 
 class CatalogsController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -13,11 +15,11 @@ class CatalogsController extends Controller
      */
     public function index()
     {
-        return view('admin.catalog');
+        return view('admin.tambah_post.tambah');
     }
 
     
-    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +28,7 @@ class CatalogsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tambah_post.tambah');
     }
 
     /**
@@ -37,7 +39,11 @@ class CatalogsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       $catalogs = Catalogs::create($request->all());
+       
+
+        return redirect()->back();
     }
 
     /**
@@ -85,3 +91,4 @@ class CatalogsController extends Controller
         //
     }
 }
+
