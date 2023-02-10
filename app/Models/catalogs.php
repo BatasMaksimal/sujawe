@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class catalogs extends Model
+class Catalogs extends Model
 {
-    use HasFactory;
+    protected $fillable = ['title','description','price','image'];
+    
+    protected $table = 'catalogs';
+
 }

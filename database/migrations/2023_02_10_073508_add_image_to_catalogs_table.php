@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catalogs', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title');
-            $table->text('description');
-            $table->double('price');
-            $table->timestamps();
+        Schema::table('catalogs', function (Blueprint $table) {
+            $table->string('image',150)->nullable()
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('catalogs');
+        Schema::table('catalogs', function (Blueprint $table) {
+            //
+        });
     }
 };

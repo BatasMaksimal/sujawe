@@ -22,16 +22,17 @@
 <div class="container">
         <div class="content my-3">
             <h3 class=" mb-2 text-center">Update Post</h3>
-            <form action="proses_tambah_produk.php" method="POST" enctype="multipart/form-data">
+            <form action="{{route('catalogs.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <!-- Nama Produk -->
                 <div class="mb-2">
                     <label class="form-label">Judul :</label>
-                    <input type="text" name="nama_produk" class="form-control" placeholder="Masukkan Nama Produk" required>
+                    <input type="text" name="title" class="form-control" placeholder="Masukkan Nama Produk" required>
                 </div>
                 <!-- deskripsi Produk -->
                 <div class="mb-2">
                     <label class="form-label">Deskripsi Produk :</label>
-                    <textarea name="deskripsi" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required></textarea>
+                    <textarea name="description" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required></textarea>
                 </div>
                 <!-- kategori -->
                 <div class="mb-2">
@@ -46,7 +47,7 @@
                 <!-- Harga Produk -->
                 <div class="mb-2">
                     <label class="form-label">Harga Produk :</label>
-                    <input type="double" name="harga" class="form-control" placeholder="Masukkan Harga Produk" required>
+                    <input type="double" name="price" class="form-control" placeholder="Masukkan Harga Produk" required>
                 </div>
                 <!-- Foto Produk -->
                 <div class="mb-4">
