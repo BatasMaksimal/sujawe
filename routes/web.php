@@ -39,6 +39,12 @@ Route::get('/admin/tambah_post', function () {
         "title"=>"Sujawe inninawa"
     ]);
 });
+
+Route::get('/admin/tambah_user', function () {
+    return view('admin.tambah_user.tambah_user',[
+        "title"=>"Sujawe inninawa"
+    ]);
+});
 // Route::get('/', function(){
 //     return view('')
 // });
