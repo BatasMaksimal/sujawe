@@ -17,12 +17,13 @@
 
 <!-- navbar -->
 @include('admin.navbar.Navbar')
+{{ $errors }}
 
 
 <div class="container">
         <div class="content my-3">
             <h3 class=" mb-2 text-center">Update Post</h3>
-            <form action="{{route('catalogs.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('admin.catalogs.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <!-- Nama Produk -->
                 <div class="mb-2">
@@ -52,7 +53,7 @@
                 <!-- Foto Produk -->
                 <div class="mb-4">
                     <label for="formFile" class="form-label">Foto Produk :</label>
-                    <input class="form-control" type="file" name="foto_produk">
+                    <input class="form-control" type="file" name="image">
                 </div>
                 <input type = "submit" name ="simpan" value ="Tambah Produk" class = "btn1 mb-2">
             </form>

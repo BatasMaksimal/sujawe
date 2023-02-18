@@ -15,7 +15,11 @@ class CatalogsController extends Controller
      */
     public function index()
     {
-        return view('admin.tambah_post.tambah');
+        $catalogs = Catalogs::all();
+    return view('admin.post_blog',[
+        "title"=>"Shone pager",
+        "catalogs"=> $catalogs
+    ]);
     }
 
     
@@ -40,10 +44,37 @@ class CatalogsController extends Controller
     public function store(Request $request)
     {
 
-       $catalogs = Catalogs::create($request->all());
-       
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'image' => 'required'
+        ]);
+        
 
-        return redirect()->back();
+        // ensure the request has a file before we attempt anything else.
+        if ($request->hasFile('image')) {
+
+            $request->validate([
+                'image' => 'mimes:jpeg,bmp,png' // Only allow .jpg, .bmp and .png file types.
+            ]);
+
+            // Save the file locally in the storage/public/ folder under a new folder named /product
+            
+            $request->file('image')->store('catalogs', 'public');
+
+            // Store the record, using the new file hashname which will be it's new filename identity.
+            $product = new Catalogs([
+                "title" => $request->get('title'),
+                "description" => $request->get('description'),
+                "price" => $request->get('price'),
+                "image" => $request->file('image')->hashName()
+            ]);
+            
+            $product->save(); // Finally, save the record.
+
+            return redirect()->route('admin.catalogs.index');
+        }
     }
 
     /**

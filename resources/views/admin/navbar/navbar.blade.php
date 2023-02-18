@@ -14,10 +14,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page">DATA USER</a>
+                    <a class="nav-link" aria-current="page" href="{{route('admin.user.index')}}">DATA USER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tampil_produk.php">POST BLOG</a>
+                    <a class="nav-link" href="{{route('admin.catalogs.index')}}">Catalog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tampil_pembelian.php">TAMBAH USER</a>

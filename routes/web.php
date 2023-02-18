@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogsController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+
+use App\Models\Catalogs;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +31,10 @@ Route::get('/admin/post_blog', function () {
 });
 
 Route::get('/admin/home', function () {
+    $catalogs = Catalogs::all();
     return view('admin.post_blog',[
-        "title"=>"Shone pager"
+        "title"=>"Shone pager",
+        "catalogs"=> $catalogs
     ]);
 });
 
@@ -38,10 +43,10 @@ Route::get('/admin/tambah_post', function () {
     return view('admin.tambah_post.tambah',[
         "title"=>"Sujawe inninawa"
     ]);
-});
+})->name('admin.tambah_post.tambah');
 
-Route::get('/admin/tambah_user', function () {
-    return view('admin.tambah_user.tambah_user',[
+Route::get('/admin/user', function () {
+    return view('admin.tambah_user.tambah',[
         "title"=>"Sujawe inninawa"
     ]);
 });
@@ -62,7 +67,8 @@ Route::get('/admin/tambah_user', function () {
 //     ]);
 // ]
 
-Route::resource('/admin/catalogs', CatalogsController::class);
+Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
+Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
 
 Route::get('password', function(){
     return Hash::make('admin');

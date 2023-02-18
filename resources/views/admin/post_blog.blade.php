@@ -41,9 +41,22 @@
                             <th scope="col" width="200px">Aksi</th>
                         </tr>
                     </thead>
-                  
+                    <tbody>
+                    @foreach($catalogs as $catalog)                    
+                        <tr>
+                            <td>{{$catalog->id}}</td>
+                            <td>{{$catalog->title}}</td>
+                            <td>
+                                <img style="width:100%;height:100px;object-fit:contain;" src="{{asset('storage/catalogs/'.$catalog->image)}}" alt="">
+                                </td>
+                            <td>{{$catalog->description}}</td>
+                            <td>{{$catalog->price}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+    
                 </table>
-                <a href="{{route('admin.tambah_post.tambah')}}"><button class="btn1">Tambah Produk</button></a>
+                <a href="{{route('admin.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
             </div>
         </div>
     </div>
