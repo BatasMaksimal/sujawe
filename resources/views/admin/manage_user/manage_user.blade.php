@@ -40,21 +40,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $User)                    
+                    
+                             @foreach($users as $user)           
                         <tr>
-                            <td>{{$User->id}}</td>
+                            <td>{{$user->id}}</td>
                             <td>{{$user->username}}</td>
-                            <td>
-                                <img style="width:100%;height:100px;object-fit:contain;" src="{{asset('storage/catalogs/'.$catalog->image)}}" alt="">
-                                </td>
-                            <td>{{$catalog->description}}</td>
-                            <td>{{$catalog->price}}</td>
+                            
+                               
+                            <td>{{$user->email}}</td>
+                            <td>{{$user->role}}</td>
                         </tr>
-                    @endforeach
+                   @endforeach
                     </tbody>
     
                 </table>
-                <a href="{{route('admin.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
+                <a href="{{route('admin.user.create')}}"><button class="btn1">Tambah Produk</button></a>
             </div>
         </div>
     </div>

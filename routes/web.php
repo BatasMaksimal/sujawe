@@ -53,6 +53,12 @@ Route::get('/admin/user', function () {
 });
 
 
+Route::get('/admin/tambah_user', function () {
+    return view('admin.tambah_user.tambah_user',[
+        "title"=>"Sujawe inninawa"
+    ]);
+})->name('admin.tambah_user.tambah_user');
+
 
 Route::get('/admin/manage_user', function () {
     $datauserController = $users::all();
