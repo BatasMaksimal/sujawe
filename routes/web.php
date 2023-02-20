@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\datauserController;
 
 use App\Models\Catalogs;
 
@@ -50,6 +51,18 @@ Route::get('/admin/user', function () {
         "title"=>"Sujawe inninawa"
     ]);
 });
+
+
+
+Route::get('/admin/manage_user', function () {
+    $datauserController = Catalogs::all();
+    return view('admin.manage_user.manage_user',[
+        "title"=>"Shone pager",
+        "catalogs"=> $datauserController
+    ]);
+});
+
+
 // Route::get('/', function(){
 //     return view('')
 // });
@@ -65,7 +78,7 @@ Route::get('/admin/user', function () {
 //     return view('posts',[
 //         "title"=>"Posts"
 //     ]);
-// ]
+// // ]
 
 Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);

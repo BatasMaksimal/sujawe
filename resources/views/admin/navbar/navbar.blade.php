@@ -14,13 +14,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('admin.user.index')}}">DATA USER</a>
+                    <a class="nav-link" aria-current="page" href="{{route('admin.user.index')}}">TAMBAH USER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.catalogs.index')}}">Catalog</a>
+                    <a class="nav-link" href="{{route('admin.catalogs.index')}}">CATALOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tampil_pembelian.php">TAMBAH USER</a>
+                    <a class="nav-link" href="tampil_pembelian.php">MANAGE USER</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tambah_admin.php">Tambah Admin Baru</a>
