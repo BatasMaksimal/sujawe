@@ -14,7 +14,9 @@ class UserController extends Controller
     public function index()
     {
         $user = User::all();
-        return view('admin.tambah_user.tambah_user');
+        return view('admin.manage_user.manage_user',[
+            "users"=> $user
+        ]);
     }
 
     /**
@@ -24,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tambah_user.tambah_user');
     }
 
     /**
