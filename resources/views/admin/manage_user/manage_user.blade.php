@@ -40,9 +40,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $user)                    
+                    @foreach($users as $User)                    
                         <tr>
-                            <td>{{$user->id}}</td>
+                            <td>{{$User->id}}</td>
                             <td>{{$user->username}}</td>
                             <td>
                                 <img style="width:100%;height:100px;object-fit:contain;" src="{{asset('storage/catalogs/'.$catalog->image)}}" alt="">

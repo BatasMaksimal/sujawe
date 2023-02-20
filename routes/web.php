@@ -55,11 +55,8 @@ Route::get('/admin/user', function () {
 
 
 Route::get('/admin/manage_user', function () {
-    $datauserController = Catalogs::all();
-    return view('admin.manage_user.manage_user',[
-        "title"=>"Shone pager",
-        "catalogs"=> $datauserController
-    ]);
+    $datauserController = $users::all();
+    return view('admin.manage_user.manage_user');
 });
 
 
