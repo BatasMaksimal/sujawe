@@ -25,11 +25,11 @@ Route::get('/admin/login', function () {
     ]);
 });
 
-Route::get('/admin/post_blog', function () {
-    return view('admin.post_blog',[
-        "title"=>"Sujawe inninawa"
-    ]);
-});
+// Route::get('/admin/post_blog', function () {
+//     return view('admin.post_blog',[
+//         "title"=>"Sujawe inninawa"
+//     ]);
+// });
 
 Route::get('/admin/home', function () {
     $catalogs = Catalogs::all();
@@ -45,6 +45,8 @@ Route::get('/admin/tambah_post', function () {
         "title"=>"Sujawe inninawa"
     ]);
 })->name('admin.tambah_post.tambah');
+
+
 
 Route::get('/admin/user', function () {
     return view('admin.tambah_user.tambah',[
