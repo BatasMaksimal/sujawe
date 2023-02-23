@@ -37,7 +37,29 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-    //    
+        print_r($request);exit();
+        
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'email' => 'required',
+            'role' => 'required'
+           
+        ]);
+
+        
+
+        // Store the record, using the new file hashname which will be it's new filename identity.
+        $user = new User([
+            "username" => $request->get('username'),
+            "password" => $request->get('password'),
+            "email" => $request->get('email'),
+            "role" => $request->get('role')
+        ]);
+        
+        //$user->save(); // Finally, save the record.
+        //return redirect()->route('admin.user.index');
+        
     }
 
     /**

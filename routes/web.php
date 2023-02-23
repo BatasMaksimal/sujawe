@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\datauserController;
 
 use App\Models\Catalogs;
@@ -25,11 +26,21 @@ Route::get('/admin/login', function () {
     ]);
 });
 
-Route::get('/admin/post_blog', function () {
-    return view('admin.post_blog',[
-        "title"=>"Sujawe inninawa"
-    ]);
-});
+Route::group(['prefix' => 'admin', 'middleware' => ['web']], function (){
+    Route::resource('/catalogs', CatalogsController::class, ['as'=>'admin']);
+
+    Route::get('/post_blog', function () {
+        return view('admin.post_blog',[
+            "title"=>"Sujawe inninawa"
+        ]);
+    });
+
+   }
+);
+
+
+
+
 
 Route::get('/admin/home', function () {
     $catalogs = Catalogs::all();
@@ -83,7 +94,8 @@ Route::get('/admin/manage_user', function () {
 //     ]);
 // // ]
 
-Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
+
+
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
 
 Route::get('password', function(){
@@ -91,4 +103,5 @@ Route::get('password', function(){
 });
 
 //Route::resource('/login', LoginController::class);
-Route::post('login',[LoginController::class, 'login']);
+Route::post('login',[LoginController::class, 'login'])->name('login');
+Route::get('logout',[LogoutController::class, 'logout'])->name('admin.logout');

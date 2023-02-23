@@ -31,7 +31,7 @@
                 <img src="{{asset('img/logo.jpg')}}" alt="" width="70%">
             </div>
             <h3 class="login">Register User</h3>
-            <form method="POST" action="/login">
+            <form method="POST" action="{{route('admin.user.store')}}">
               @csrf
               <div class="form-row">
                 <div class="col-lg-7">
@@ -51,7 +51,7 @@
               <div class="form-row">
                 <div class="col-lg-7">
                   <!-- Password -->
-                    <input id="password-field" type="password" class="form-control my-3 p-3" name="password" placeholder="Return" value="" required>
+                    <input id="password-field" type="password" class="form-control my-3 p-3" name="password_confirm" placeholder="Return" value="" required>
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle" onclick="myFunction()"></span>
                 </div>
               </div>
@@ -61,7 +61,7 @@
                     <?php
                         $arr_role=array('A'=>'Admin','U'=>'User');
                     ?>
-                    <select type="text" name="ROLE" class="form-control my-2 p-2" class="form-control form" placeholder="ROLE" required>
+                    <select type="text" name="role" class="form-control my-2 p-2" class="form-control form" placeholder="ROLE" required>
                             <?php foreach ($arr_role as $key_role => $val_role):?>
                             <option value="<?=$key_role?>"><?=$val_role?></option>
                             <?php endforeach ?>
@@ -77,7 +77,7 @@
               <div class="form-row">
                 <div class="col-lg-7">
                   <!-- button -->
-                  <button type="submit" class="btn1 mb-4">Tambah</button>
+                  <button type="submit" name ="simpan" class="btn1 mb-4">Tambah</button>
                 </div>
               </div>
             </form>

@@ -1,39 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller{
 
+class LogoutController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function login (Request $request){
-        $username = $request->get('username');
-        $password = $request->get('password');
-
-        if(Auth::attempt([
-            'username'=>$username,
-            'password'=>$password
-        ])){
-            return redirect('/admin/home');
-        }
-    }
-
     public function logout(Request $request): RedirectResponse
-    {
-        Auth::logout();
+{
+    Auth::logout();
  
-        $request->session()->invalidate();
+    $request->session()->invalidate();
  
-        $request->session()->regenerateToken();
+    $request->session()->regenerateToken();
  
-        return redirect('/admin/login');
+    return redirect('/admin/login');
 }
-     
 
     /**
      * Show the form for creating a new resource.
