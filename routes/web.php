@@ -25,11 +25,7 @@ Route::get('/admin/login', function () {
     ]);
 });
 
-// Route::get('/admin/post_blog', function () {
-//     return view('admin.post_blog',[
-//         "title"=>"Sujawe inninawa"
-//     ]);
-// });
+
 
 Route::get('/admin/home', function () {
     $catalogs = Catalogs::all();
@@ -46,44 +42,11 @@ Route::get('/admin/tambah_post', function () {
     ]);
 })->name('admin.tambah_post.tambah');
 
-
-
-Route::get('/admin/user', function () {
-    return view('admin.tambah_user.tambah',[
-        "title"=>"Sujawe inninawa"
-    ]);
-});
-
-
 Route::get('/admin/tambah_user', function () {
     return view('admin.tambah_user.tambah_user',[
         "title"=>"Sujawe inninawa"
     ]);
 })->name('admin.tambah_user.tambah_user');
-
-
-Route::get('/admin/manage_user', function () {
-    $datauserController = $users::all();
-    return view('admin.manage_user.manage_user');
-});
-
-
-// Route::get('/', function(){
-//     return view('')
-// });
-// Route::get('/about', function () {
-//     return view('about',[
-//         "title"=>"About",
-//         "name"=>" Javier",
-//         "email"=>"sultan.javier@gmail.com",
-//         "image"=>"sultan.jpg"
-//     ]);
-// });
-// Route::get('/blog', function () {
-//     return view('posts',[
-//         "title"=>"Posts"
-//     ]);
-// // ]
 
 Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
