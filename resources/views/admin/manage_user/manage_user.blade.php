@@ -37,6 +37,7 @@
                             <th scope="col">USERNAME</th>
                             <th scope="col">email</th>
                             <th scope="col">ROLE</th>
+                            <th scope="col">DELETE</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,12 +50,15 @@
                                
                             <td>{{$user->email}}</td>
                             <td>{{$user->role}}</td>
+                            <td> <a href="" class="btn btn-danger"> DELETE </a> </td>
                         </tr>
                    @endforeach
                     </tbody>
     
                 </table>
-                <a href="{{route('admin.user.create')}}"><button class="btn1">Tambah Produk</button></a>
+                <a href="{{route('admin.user.create')}}"><button class="btn1">Tambah User</button></a>
+              
+
             </div>
         </div>
     </div>
