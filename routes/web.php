@@ -56,6 +56,7 @@ Route::get('/admin/tambah_user', function () {
 
 
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
+Route::resource('/admin/catalogs', UserController::class, ['as'=>'admin']);
 
 Route::get('password', function(){
     return Hash::make('admin');
