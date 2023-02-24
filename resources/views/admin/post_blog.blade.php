@@ -38,6 +38,7 @@
                             <th scope="col">IMAGE</th>
                             <th scope="col">DESKIRPSI</th>
                             <th scope="col">HARGA</th>
+                            <th scope="col">EDIT</th>
                             <th scope="col" width="200px">Aksi</th>
                         </tr>
                     </thead>
@@ -51,6 +52,9 @@
                                 </td>
                             <td>{{$catalog->description}}</td>
                             <td>{{$catalog->price}}</td>
+                            <td> <a href="" class="btn2"> EDIT </a> </td>
+                            <td> <a href="" class="btn btn-danger"> DELETE </a> </td>
+
                         </tr>
                     @endforeach
                     </tbody>

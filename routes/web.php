@@ -57,6 +57,8 @@ Route::get('/admin/tambah_post', function () {
     ]);
 })->name('admin.tambah_post.tambah');
 
+
+
 Route::get('/admin/user', function () {
     return view('admin.tambah_user.tambah',[
         "title"=>"Sujawe inninawa"
