@@ -20,17 +20,13 @@ use App\Models\Catalogs;
 |
 */
 
+// Route admin
+
 Route::get('/admin/login', function () {
     return view('admin.login',[
         "title"=>"Sujawe inninawa"
     ]);
 });
-
-// Route::get('/admin/post_blog', function () {
-//     return view('admin.post_blog',[
-//         "title"=>"Sujawe inninawa"
-//     ]);
-// });
 
 Route::get('/admin/home', function () {
     $catalogs = Catalogs::all();
@@ -39,7 +35,6 @@ Route::get('/admin/home', function () {
         "catalogs"=> $catalogs
     ]);
 });
-
 
 Route::get('/admin/tambah_post', function () {
     return view('admin.tambah_post.tambah',[
@@ -53,6 +48,14 @@ Route::get('/admin/tambah_user', function () {
     ]);
 })->name('admin.tambah_user.tambah_user');
 
+// Route user
+
+Route::get('/user/login', function () {
+    return view('user.login_user',[
+        "title"=>"Sujawe inninawa"
+    ]);
+});
+
 
 
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
@@ -65,3 +68,4 @@ Route::get('password', function(){
 //Route::resource('/login', LoginController::class);
 Route::post('login',[LoginController::class, 'login'])->name('login');
 Route::get('logout',[LogoutController::class, 'logout'])->name('admin.logout');
+
