@@ -37,8 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        print_r($request);exit();
-        
+       
         $request->validate([
             'username' => 'required',
             'password' => 'required',
@@ -52,13 +51,13 @@ class UserController extends Controller
         // Store the record, using the new file hashname which will be it's new filename identity.
         $user = new User([
             "username" => $request->get('username'),
-            "password" => $request->get('password'),
+            "password" => bcrypt($request->get('password')),
             "email" => $request->get('email'),
             "role" => $request->get('role')
         ]);
         
-        //$user->save(); // Finally, save the record.
-        //return redirect()->route('admin.user.index');
+        $user->save(); // Finally, save the record.
+        return redirect()->route('admin.user.index');
         
     }
 
@@ -104,6 +103,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findorfail($id);
+        $user->delete();
+
+        return redirect()->back()->with('succes','Data berhasil dihapus');
     }
 }

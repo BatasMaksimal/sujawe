@@ -22,6 +22,21 @@ class CatalogsController extends Controller
     ]);
     }
 
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$catalogs = Catalogs::table('catalogs')
+		->where('title','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('admin.catalogs.index',['catalogs' => $catalogs]);
+ 
+	}
+
     
     
 
@@ -96,7 +111,8 @@ class CatalogsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $catalogs = Catalogs::findorfail($id);
+        return view('admin.tambah_post.edit',compact('catalogs'));
     }
 
     /**
@@ -108,7 +124,22 @@ class CatalogsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'image' => 'required'
+        ]);
+
+        $request->file('image')->store('catalogs', 'public');
+        $product = [
+            "title" => $request->get('title'),
+            "description" => $request->get('description'),
+            "price" => $request->get('price'),
+            "image" => $request->file('image')->hashName()
+        ];
+        Catalogs::whereId($id)->update( $product);
+        return redirect()->route('admin.catalogs.index')->with('success','Data berhasil diupdate');
     }
 
     /**
@@ -119,7 +150,10 @@ class CatalogsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $catalogs = Catalogs::findorfail($id);
+        $catalogs->delete();
+
+        return redirect()->back()->with('succes','Data berhasil dihapus');
     }
 }
 

@@ -24,7 +24,7 @@ Route::get('/admin/login', function () {
     return view('admin.login',[
         "title"=>"Sujawe inninawa"
     ]);
-});
+})->name('admin.login');
 
 // Route::get('/admin/post_blog', function () {
 //     return view('admin.post_blog',[
@@ -32,7 +32,7 @@ Route::get('/admin/login', function () {
 //     ]);
 // });
 
-Route::get('/admin/home', function () {
+Route::get('/admin/catalogs', function () {
     $catalogs = Catalogs::all();
     return view('admin.post_blog',[
         "title"=>"Shone pager",
@@ -44,19 +44,19 @@ Route::get('/admin/home', function () {
 Route::get('/admin/tambah_post', function () {
     return view('admin.tambah_post.tambah',[
         "title"=>"Sujawe inninawa"
-    ]);
+    ])->middleware('auth');
 })->name('admin.tambah_post.tambah');
 
 Route::get('/admin/tambah_user', function () {
     return view('admin.tambah_user.tambah_user',[
         "title"=>"Sujawe inninawa"
-    ]);
+    ])->middleware('auth');
 })->name('admin.tambah_user.tambah_user');
 
 
 
-Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
-Route::resource('/admin/catalogs', UserController::class, ['as'=>'admin']);
+Route::resource('/admin/user', UserController::class, ['as'=>'admin'])->middleware('auth');
+Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin'])->middleware('auth');
 
 Route::get('password', function(){
     return Hash::make('admin');
@@ -65,3 +65,4 @@ Route::get('password', function(){
 //Route::resource('/login', LoginController::class);
 Route::post('login',[LoginController::class, 'login'])->name('login');
 Route::get('logout',[LogoutController::class, 'logout'])->name('admin.logout');
+Route::get('/cari','CatalogsController@cari')->name('admin.catalogs.index');

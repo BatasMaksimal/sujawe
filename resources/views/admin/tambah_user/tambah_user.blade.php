@@ -46,6 +46,12 @@
                     <input id="password-field" type="password" class="form-control my-3 p-3" name="password" placeholder="Password" value="" required>
                         <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle" onclick="myFunction()"></span>
                 </div>
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <!-- Email -->
+                    <input id="email-field" type="email" class="form-control my-3 p-3" name="email" placeholder="Email" value="" required>
+                        <span toggle="#email-field" class="fa fa-fw fa-eye field-icon toggle" onclick="myFunction()"></span>
+                </div>
               </div>
 
               <div class="form-row">
@@ -59,7 +65,7 @@
               <div class="form-row">
                 <div class="col-lg-7">
                     <?php
-                        $arr_role=array('A'=>'Admin','U'=>'User');
+                        $arr_role=array('admin'=>'Admin','user'=>'User');
                     ?>
                     <select type="text" name="role" class="form-control my-2 p-2" class="form-control form" placeholder="ROLE" required>
                             <?php foreach ($arr_role as $key_role => $val_role):?>
@@ -77,7 +83,7 @@
               <div class="form-row">
                 <div class="col-lg-7">
                   <!-- button -->
-                  <button type="submit" name ="simpan" class="btn1 mb-4">Tambah</button>
+                  <button type="submit" name ="simpan" value ="Tambah User" class="btn1 mb-4">Tambah</button>
                 </div>
               </div>
             </form>

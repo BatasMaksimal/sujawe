@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="text-center mt-2 mb-3">POST BLOG<h3>
-                <form action="tampil_produk.php" method="post">
+                <form action="{{route('admin.catalogs.index')}}" method="GET">
                     <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian">
                 </form>
             </div>
@@ -50,7 +50,11 @@
                                
                             <td>{{$user->email}}</td>
                             <td>{{$user->role}}</td>
-                            <td> <a href="" class="btn btn-danger"> DELETE </a> </td>
+                            <form action="{{route('admin.user.destroy', $user->id)}}" method="POST">
+                                @csrf
+                                @method('delete')
+                            <td> <a type="submit" class="btn btn-danger"> DELETE </a> </td>
+                            </form>
                         </tr>
                    @endforeach
                     </tbody>

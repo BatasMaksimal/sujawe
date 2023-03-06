@@ -25,8 +25,8 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="text-center mt-2 mb-3">POST BLOG<h3>
-                <form action="tampil_produk.php" method="post">
-                    <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian">
+                <form action="{{route('admin.catalogs.index')}}" method="GET">
+                    <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian" value="{{ request('cari') }}">
                 </form>
             </div>
             <div class="card-body">
@@ -52,8 +52,15 @@
                                 </td>
                             <td>{{$catalog->description}}</td>
                             <td>{{$catalog->price}}</td>
-                            <td> <a href="" class="btn2"> EDIT </a> </td>
-                            <td> <a href="" class="btn btn-danger"> DELETE </a> </td>
+                            <td> <a href="{{route('admin.catalogs.edit', $catalog->id)}}" class="btn2"> EDIT </a> </td>
+                            
+                            <td>
+                            <form action="{{route('admin.catalogs.destroy', $catalog->id)}}" method="POST">
+                                @csrf
+                                @method('delete')<button type="submit" class="btn btn-danger"> DELETE </a> 
+                                </form>
+                            </td>
+                            
 
                         </tr>
                     @endforeach

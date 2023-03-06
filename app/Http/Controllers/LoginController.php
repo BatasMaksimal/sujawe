@@ -18,8 +18,10 @@ class LoginController extends Controller{
         if(Auth::attempt([
             'username'=>$username,
             'password'=>$password
-        ])){
-            return redirect('/admin/home');
+        ])){            
+            return redirect('/admin/catalogs');
+        }else{
+            return redirect()->back()->with('message','Username atau password salah');
         }
     }
 
