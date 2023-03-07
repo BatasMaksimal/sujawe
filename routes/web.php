@@ -48,6 +48,17 @@ Route::get('/admin/tambah_user', function () {
     ]);
 })->name('admin.tambah_user.tambah_user');
 
+
+//CATALOGS
+Route::get('/sujawe/home', function () {
+    return view('web.index',[
+        "title"=>"Sujawe inninawa"
+    ]);
+});
+
+
+
+
 // Route user
 
 Route::get('/user/login', function () {
