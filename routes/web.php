@@ -65,6 +65,12 @@ Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
 // WEB CATALOG
 
 Route::resource('/sujawe/home', UsersController::class);
+//CATALOGS
+Route::get('/sujawe/home', function () {
+    return view('web.index',[
+        "title"=>"Sujawe inninawa"
+    ]);
+});
 
 
 
