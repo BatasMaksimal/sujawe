@@ -53,7 +53,7 @@
                             <form action="{{route('admin.user.destroy', $user->id)}}" method="POST">
                                 @csrf
                                 @method('delete')
-                            <td> <a type="submit" class="btn btn-danger"> DELETE </a> </td>
+                            <td><button> <a type="submit" class="btn btn-danger"> DELETE </a></button> </td>
                             </form>
                         </tr>
                    @endforeach

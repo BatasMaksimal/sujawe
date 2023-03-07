@@ -70,7 +70,7 @@
               <div class="form-row">
                 <div class="col-lg-7">
                     <?php
-                        $arr_role=array('A'=>'Admin','U'=>'User');
+                        $arr_role=array('admin'=>'Admin','user'=>'User');
                     ?>
                                 <select type="text" name="role" class="form-control my-2 p-2" class="form-control form"
                                     placeholder="ROLE" required>

@@ -43,6 +43,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
                     @foreach($catalogs as $catalog)                    
                         <tr>
                             <td>{{$catalog->id}}</td>
@@ -52,15 +53,22 @@
                                 </td>
                             <td>{{$catalog->description}}</td>
                             <td>{{$catalog->price}}</td>
-                            <td> <a href="" class="btn2"> EDIT </a> </td>
-                            <td> <a href="" class="btn btn-danger"> DELETE </a> </td>
+                            <td> <a href="{{route('users.catalogs.edit', $catalog->id)}}" class="btn2"> EDIT </a> </td>
+                            
+                            
+                            <td>
+                            <form action="{{route('users.catalogs.destroy', $catalog->id)}}" method="POST">
+                                @csrf
+                                @method('delete')<button type="submit" class="btn btn-danger"> DELETE </a> 
+                                </form>
+                            </td>
 
                         </tr>
                     @endforeach
                     </tbody>
     
                 </table>
-                <a href="{{route('admin.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
+                <a href="{{route('users.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
             </div>
         </div>
     </div>

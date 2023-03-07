@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatalogsController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -20,7 +21,7 @@ use App\Models\Catalogs;
 |
 */
 
-// Route admin
+// ROUTE ADMIN
 
 Route::get('/admin/login', function () {
     return view('admin.login',[
@@ -54,17 +55,31 @@ Route::get('/admin/tambah_user', function () {
     ])->middleware('auth');
 })->name('admin.tambah_user.tambah_user');
 
-// Route user
-
-Route::get('/user/login', function () {
-    return view('user.login_user',[
-        "title"=>"Sujawe inninawa"
-    ]);
-});
-
-
-
 Route::resource('/admin/user', UserController::class, ['as'=>'admin']);
+Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
+
+
+
+
+
+// WEB CATALOG
+
+Route::resource('/sujawe/home', UsersController::class);
+
+
+
+
+
+
+// ROUTE USER
+
+Route::resource('/user/catalogs', UsersController::class, ['as'=>'users']);
+
+Route::get('/user/tambah_post', function () {
+    return view('user.tambah_post.tambah_post',[
+        "title"=>"Sujawe inninawa"
+    ])->middleware('auth');
+})->name('user.tambah_post.tambah_post');
 
 Route::get('password', function(){
     return Hash::make('admin');

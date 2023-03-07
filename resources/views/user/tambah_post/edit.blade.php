@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Produk</title>
+    <title>Edit Produk</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -16,24 +16,25 @@
 
 
 <!-- navbar -->
-@include('user.navbar.navbar_user')
-{{ $errors }}
+@include('admin.navbar.Navbar')
+
 
 
 <div class="container">
         <div class="content my-3">
-            <h3 class=" mb-2 text-center">Update Post</h3>
-            <form action="{{route('users.catalogs.store')}}" method="POST" enctype="multipart/form-data">
+            <h3 class=" mb-2 text-center">Edit Post</h3>
+            <form action="{{route('users.catalogs.update',$catalogs->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method('patch')
                 <!-- Nama Produk -->
                 <div class="mb-2">
                     <label class="form-label">Judul :</label>
-                    <input type="text" name="title" class="form-control" placeholder="Masukkan Nama Produk" required>
+                    <input type="text" name="title" class="form-control" placeholder="Masukkan Nama Produk" required value="{{ $catalogs->title}}">
                 </div>
                 <!-- deskripsi Produk -->
                 <div class="mb-2">
                     <label class="form-label">Deskripsi Produk :</label>
-                    <textarea name="description" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required></textarea>
+                    <textarea name="description" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required value="{{ $catalogs->description}}"></textarea>
                 </div>
                 <!-- kategori -->
                 <div class="mb-2">
@@ -48,12 +49,12 @@
                 <!-- Harga Produk -->
                 <div class="mb-2">
                     <label class="form-label">Harga Produk :</label>
-                    <input type="double" name="price" class="form-control" placeholder="Masukkan Harga Produk" required>
+                    <input type="double" name="price" class="form-control" placeholder="Masukkan Harga Produk" required value="{{ $catalogs->price}}">
                 </div>
                 <!-- Foto Produk -->
                 <div class="mb-4">
                     <label for="formFile" class="form-label">Foto Produk :</label>
-                    <input class="form-control" type="file" name="image">
+                    <input class="form-control" type="file" name="image" value="{{ $catalogs->image}}">
                 </div>
                 <input type = "submit" name ="simpan" value ="Tambah Produk" class = "btn1 mb-2">
             </form>

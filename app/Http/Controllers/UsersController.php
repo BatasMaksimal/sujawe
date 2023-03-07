@@ -2,50 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Users;
 use App\Models\Catalogs;
 use Illuminate\Http\Request;
 
-class CatalogsController extends Controller
+class UsersController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        if($request->cari){
-            // menangkap data pencarian
-		    $cari = $request->cari;
-        
-            $cari = $request->cari;
-            $this->cari($cari);
-        }
-        
+        $users = Users::all();
         $catalogs = Catalogs::all();
-        return view('admin.post_blog',[
+        return view('user.post_blog_user',[
             "title"=>"Shone pager",
-            "catalogs"=> $catalogs
+            "users"=> $users,
+            "catalogs"=>$catalogs
         ]);
     }
-
-    public function cari($cari)
-	{
-		// mengambil data dari table pegawai sesuai pencarian data
-		$catalogs = Catalogs::where('title','like',"%".$cari."%");
-        
-        // mengirim data pegawai ke view index
-		return view('admin.post_blog',[
-            "title"=>"Search found",
-            'catalogs' => $catalogs
-        ]);
- 
-	}
-
-    
-    
 
     /**
      * Show the form for creating a new resource.
@@ -54,7 +31,7 @@ class CatalogsController extends Controller
      */
     public function create()
     {
-        return view('admin.tambah_post.tambah');
+        return view('user.tambah_post.tambah_post');
     }
 
     /**
@@ -65,7 +42,6 @@ class CatalogsController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -95,7 +71,7 @@ class CatalogsController extends Controller
             
             $product->save(); // Finally, save the record.
 
-            return redirect()->route('admin.catalogs.index');
+            return redirect()->route('users.catalogs.index');
         }
     }
 
@@ -119,7 +95,7 @@ class CatalogsController extends Controller
     public function edit($id)
     {
         $catalogs = Catalogs::findorfail($id);
-        return view('admin.tambah_post.edit',compact('catalogs'));
+        return view('user.tambah_post.edit',compact('catalogs'));
     }
 
     /**
@@ -131,7 +107,7 @@ class CatalogsController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $this->validate($request, [
+        $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
@@ -146,7 +122,7 @@ class CatalogsController extends Controller
             "image" => $request->file('image')->hashName()
         ];
         Catalogs::whereId($id)->update( $product);
-        return redirect()->route('admin.catalogs.index')->with('success','Data berhasil diupdate');
+        return redirect()->route('users.catalogs.index')->with('success','Data berhasil diupdate');
     }
 
     /**
@@ -163,4 +139,3 @@ class CatalogsController extends Controller
         return redirect()->back()->with('succes','Data berhasil dihapus');
     }
 }
-
