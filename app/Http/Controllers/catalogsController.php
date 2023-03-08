@@ -15,16 +15,12 @@ class CatalogsController extends Controller
      */
     public function index(Request $request)
     {
-
+        
+        $catalogs = Catalogs::query();
         if($request->cari){
-            // menangkap data pencarian
-		    $cari = $request->cari;
-        
-            $cari = $request->cari;
-            $this->cari($cari);
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
-        
-        $catalogs = Catalogs::all();
+        $catalogs = $catalogs->get();
         return view('admin.post_blog',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
