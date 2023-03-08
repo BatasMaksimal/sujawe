@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\datauserController;
+use App\Http\Controllers\WebController;
 
 use App\Models\Catalogs;
 
@@ -64,14 +65,8 @@ Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
 
 // WEB CATALOG
 
-Route::resource('/sujawe/home', UsersController::class);
+Route::resource('/sujawe/home', WebController::class);
 //CATALOGS
-Route::get('/sujawe/home', function () {
-    return view('web.index',[
-        "title"=>"Sujawe inninawa"
-    ]);
-});
-
 
 
 

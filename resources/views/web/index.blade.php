@@ -68,7 +68,7 @@
 
 
 <!-- footer -->
-
+@include('web.footer.footer')
 
 
     <!-- JavaScript Bundle with Popper -->
