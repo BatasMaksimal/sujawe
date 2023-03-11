@@ -28,7 +28,7 @@
     <div class="home">
 
         <div class="sujawe">
-            <img src="{{asset('img/sujinawa-04.jpg')}}" alt="Snow">
+            <img src="{{asset('img/sujinawa-05.jpg')}}" alt="Snow">
             <button class="btn2">Hubungi Kami </button>
         </div>
 
