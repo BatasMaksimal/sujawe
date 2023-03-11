@@ -1,48 +1,63 @@
-<section class="footer">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="box-container">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer responsive</title>
+    <link rel="stylesheet" href="{{asset('css/web/footer.css')}}">
+    <script src="fontawesome/all.js"></script>
+</head>
 
-        <div class="box">
-            <h3>our locations</h3>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> Jl. Semolowaru Utara III No.31 </a>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Posisi Header -->
         </div>
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#featured"> <i class="fas fa-arrow-right"></i> featured </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        <div class="content">
+            <!-- Posisi konten -->
         </div>
-
-        <div class="box">
-            <h3>bussiness hour</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Mon:	8:00 AM - 4:00 PM </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Tue:	8:00AM - 4:00 PM </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> wed:	8:00AM - 4:00 PM </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Thu:	8:00AM - 4:00 PM </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Fri:	8:00AM - 4:00 PM </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> sat:	Closed </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> sun:	Closed </a>
+        <div class="footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Lokasi</h4>
+                    <ul>
+                        <li><a href="#">Bantuan</a></li>
+                        <li><a href="#">Metode Pembayaran</a></li>
+                        <li><a href="#">Gratis Ongkir</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Kebijakan Provasi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Kontak Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Toko</h4>
+                    <ul>
+                        <li><a href="#">Jual Beli</a></li>
+                        <li><a href="#">COD</a></li>
+                        <li><a href="#">Pusat Edukasi</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +09772277777 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +08666666666 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> sidancok@gmail.com</a>
-            <img src="image/worldmap.png" class="map" alt="">
-        </div>
-        
     </div>
+</body>
 
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-    </div>
-
-    <div class="credit"> copyright by<span> CV sujawe inninawa</span> | all rights reserved! </div>
-
-</section>
+</html>
