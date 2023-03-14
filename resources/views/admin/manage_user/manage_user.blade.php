@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="text-center mt-2 mb-3">POST BLOG<h3>
-                <form action="{{route('admin.catalogs.index')}}" method="GET">
+                <form action="{{route('admin.user.index')}}" method="GET">
                     <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian">
                 </form>
             </div>

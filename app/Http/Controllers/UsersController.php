@@ -15,6 +15,10 @@ class UsersController extends Controller
      */
     public function index()
     {
+        $catalogs = Catalogs::query();
+        if($request->cari){
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
+        }
         $users = Users::all();
         $catalogs = Catalogs::all();
         return view('user.post_blog_user',[

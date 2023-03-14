@@ -11,9 +11,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $user = User::all();
+        $user = User::query();
+        if($request->cari){
+            $user = $user->where('username','LIKE', '%'.$request->cari.'%');
+        }
+        $user = $user->get();
         return view('admin.manage_user.manage_user',[
             "users"=> $user
         ]);

@@ -65,7 +65,7 @@
                         </tr>
                     @endforeach
                     </tbody>
-    
+                    
                 </table>
                 <a href="{{route('admin.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
             </div>
