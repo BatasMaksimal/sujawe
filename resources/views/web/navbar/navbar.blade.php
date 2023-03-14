@@ -16,10 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand mt-2" href="index.php">
-            
-        <img src="{{asset('img/logo.jpg')}}" alt="" width="190px" height="70px">
-    </a>
+        
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +38,7 @@
 
             
             <li class="nav-item">
-                <a class="nav-link" href="">Foto Pengiriman</a>
+                <a class="nav-link" href="">Galery</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">Blog</a>

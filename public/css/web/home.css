@@ -58,8 +58,8 @@ body{
     position: absolute;
     top: 80%;
     left: 40%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(115%, -50%);
+    -ms-transform: translate(-80%, 50%);
     background-color: #00A550;
     color: white;
     font-size: 16px;
@@ -67,7 +67,6 @@ body{
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 60%;
   }
   
   .sujawe .btn2:hover {
@@ -87,5 +86,61 @@ body{
     border: none;
     border-radius: 5px;
   }
+
+
+  /* style produk */
+.card-bodai{
+  width: 200px;
+  height: 300px;
+  margin-left: 5%;
+}
+
+.card-tampilan{
+  background-color: #00A550;
+  width: 200px;
+  height: 150px;
+}
+
+.card-img-top{
+  width: 200px;
+  height: 150px;
+}
+
+.judul-produk{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 100%;
+    max-height: 100%;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: horizontal;
+}
+.harga-produk{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 400; 
+}
+.btn1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    width: 90px;
+    height: 30px;
+    background-color: #101010;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.btn1:hover{
+    background: white;
+    color: black;
+    border: 1px solid;
+}
+
 
  
