@@ -34,7 +34,7 @@
                         <li><a href="#">Bantuan</a></li>
                         <li><a href="#">Metode Pembayaran</a></li>
                         <li><a href="#">Gratis Ongkir</a></li>
-                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="{{route('contact')}}">Hubungi Kami</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

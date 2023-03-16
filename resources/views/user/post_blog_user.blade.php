@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="text-center mt-2 mb-3">POST BLOG<h3>
-                <form action="tampil_produk.php" method="post">
+                <form action="{{route('users.catalogs.index')}}" method="get">
                     <input type="text" name="cari" class="form-control mb-3" placeholder="Masukkan keyword pencarian">
                 </form>
             </div>

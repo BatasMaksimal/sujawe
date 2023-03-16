@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Catalogs;
 
-class PengirimanController extends Controller
+class GaleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,11 @@ class PengirimanController extends Controller
      */
     public function index()
     {
-        //
+        $contact = Catalogs::all();
+        return view('web.galery',[
+            "title"=>"Shone pager",
+            "catalogs"=> $contact
+        ]);
     }
 
     /**

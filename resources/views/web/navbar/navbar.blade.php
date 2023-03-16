@@ -23,31 +23,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Home</a>
+            <a class="nav-link" aria-current="page" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="">Produk</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="">Contact</a>
+                <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Produk dan layanan</a>
+                <a class="nav-link" href="{{route('layanan')}}">Produk dan layanan</a>
             </li>
 
             
             <li class="nav-item">
-                <a class="nav-link" href="">Galery</a>
+                <a class="nav-link" href="{{route('galery')}}">Galery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Blog</a>
+                <a class="nav-link" href="{{route('blog')}}">Blog</a>
             </li>
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item mt-1">
                 <div class="searchbar">
-                    <form method="POST" action="produk.php" class="d-flex">
+                    <form method="POST" action="" class="d-flex">
                         <input class="search px-2" type="search" name="cari" placeholder="Search" aria-label="Search">
                         <button class="btn btn-sm">Search
                     </form>

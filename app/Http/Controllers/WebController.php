@@ -12,14 +12,32 @@ class WebController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $catalogs = Catalogs::all();
+        
+        $catalogs = Catalogs::query();
+        if($request->cari){
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(10);;
+        }
+        $catalogs = $catalogs->get();
         return view('web.index',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
         ]);
     }
+
+    public function cari($cari)
+	{
+		// mengambil data dari table pegawai sesuai pencarian data
+		$catalogs = Catalogs::where('title','like',"%".$cari."%");
+        
+        // mengirim data pegawai ke view index
+		return view('web.index',[
+            "title"=>"Search found",
+            'catalogs' => $catalogs
+        ]);
+ 
+	}
 
     /**
      * Show the form for creating a new resource.
