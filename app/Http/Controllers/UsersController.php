@@ -13,10 +13,14 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $catalogs = Catalogs::query();
+        if($request->cari){
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
+        }
         $users = Users::all();
-        $catalogs = Catalogs::all();
+        $catalogs = $catalogs->get();
         return view('user.post_blog_user',[
             "title"=>"Shone pager",
             "users"=> $users,

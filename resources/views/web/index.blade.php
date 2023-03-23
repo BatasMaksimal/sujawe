@@ -29,7 +29,9 @@
 
         <div class="sujawe">
             <img src="{{asset('img/sujinawa-05.jpg')}}" alt="Snow">
-            <button class="btn2">Hubungi Kami </button>
+            <button class="btn2" href="{{route('contact')}}">
+                <a href="{{route('contact')}}">Hubungi Kami</a>
+            </button>
         </div>
 
         <div calss="display">
