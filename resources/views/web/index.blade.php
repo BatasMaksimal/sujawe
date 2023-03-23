@@ -34,25 +34,125 @@
 
         <div calss="display">
             <h3 class="new">Produk terbaru<h3>
-                 <div class="col mb-3">
-                <div class="card-bodai">
-                    <img src="{{asset('img/sujinawa-04.jpg')}}" class="card-img-top" width="1px" height="253px" ><title>Placeholder</title>
-                        <rect width="500%" height="500%" fill="#55595c"/></img>
-                        <div class="card-tampilan">
-                            <p class="card-text judul-produk"><b>sss</b></p>
-                            <p class="card-text harga-produk">RP.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href=""><button type="submit" class="btn1">Beli</button></a>
+                    <div class="sjw">
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
                                 </div>
-                                <small class="text-muted"></small>
+                            </div>
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
+                                    <p class="card-text harga-produk">RP.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
         </div>
+    </div>
 
-        
+
     </div>
 
 

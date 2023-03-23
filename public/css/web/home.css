@@ -6,7 +6,7 @@ body{
     background-color: white;
     margin-left: 8%;
     margin-right: 8%;
-    padding-bottom: 1%;
+    padding-bottom:20%;
 }
  
 /* h3{
@@ -46,6 +46,7 @@ body{
 .sujawe {
     position: relative;
     width: 50%;
+    height: auto;
   }
   
   /* Make the image responsive */
@@ -89,27 +90,40 @@ body{
 
 
   /* style produk */
+.sjw{
+    --bs-gutter-x: -17rem;
+    --bs-gutter-y: -10rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    border-radius: 5px;
+}
+
 .card-bodai{
-  width: 200px;
+  width: 202px;
   height: 300px;
-  margin-left: 5%;
 }
 
 .card-tampilan{
-  background-color: #00A550;
-  width: 200px;
-  height: 150px;
+  width: 235px;
+  height: 200px;
+  background-color: rgba(234, 248, 235, 0.904);
+  border-radius: 2px;
 }
 
 .card-img-top{
   width: 200px;
   height: 150px;
+  margin-left: 10px;
 }
 
 .judul-produk{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 10px 10px 10px 10px;
+    font-weight: 500;
     max-width: 100%;
     max-height: 100%;
     text-overflow: ellipsis;
@@ -117,7 +131,7 @@ body{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
 }
 .harga-produk{
     font-family: 'Source Sans Pro', sans-serif;
@@ -128,9 +142,10 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 400;
+    margin: 50px 50px 80px 60px;
     width: 90px;
     height: 30px;
-    background-color: #101010;
+    background-color: #00A550;
     color: white;
     border: none;
     outline: none;
@@ -138,7 +153,7 @@ body{
 }
 .btn1:hover{
     background: white;
-    color: black;
+    color: #8AC542;
     border: 1px solid;
 }
 
