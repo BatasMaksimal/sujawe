@@ -91,8 +91,8 @@ body{
 
   /* style produk */
 .sjw{
-    --bs-gutter-x: -17rem;
-    --bs-gutter-y: -10rem;
+    --bs-gutter-x: -16rem;
+    --bs-gutter-y: -5rem;
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--bs-gutter-y));
@@ -102,8 +102,8 @@ body{
 }
 
 .card-bodai{
-  width: 202px;
-  height: 300px;
+  width: 250px;
+  height: 400px;
 }
 
 .card-tampilan{
