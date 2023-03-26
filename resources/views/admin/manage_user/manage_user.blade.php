@@ -60,6 +60,7 @@
                     </tbody>
     
                 </table>
+                {{ $users->links() }}
                 <a href="{{route('admin.user.create')}}"><button class="btn1">Tambah User</button></a>
               
 
