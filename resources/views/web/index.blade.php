@@ -35,17 +35,22 @@
         </div>
 
         <div calss="display">
-            <h3 class="new">Produk terbaru<h3>
-                    <div class="sjw">
+            <h3 class="new">Produk terbaru<h3>        
+                <div class="sjw">
+                    
+                @foreach($latest as $catalog)       
+                    
+
+
                         <div class="col md-4">
                             <div class="card-bodai">
-                                <img src="{{asset('img/book1.jpg')}}" class="card-img-top" width="1px"
+                                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"
                                     height="253px">
                                 <title>Placeholder</title>
                                 <rect width="500%" height="500%" fill="#55595c" /></img>
                                 <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>Ayah Kaya vs. Ayah Miskin Robert Kiyosaki</b></p>
-                                    <p class="card-text harga-produk">RP.</p>
+                                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
+                                    <p class="card-text harga-produk">{{$catalog->price}}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a href=""><button type="submit" class="btn1">Beli</button></a>
@@ -55,11 +60,14 @@
                                 </div>
                             </div>
                         </div>
+
+                @endforeach
+
+                </div>                           
         </div>
     </div>
 
-
-    </div>
+    
 
 
     <!-- footer -->

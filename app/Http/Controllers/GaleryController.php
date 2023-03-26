@@ -14,10 +14,9 @@ class GaleryController extends Controller
      */
     public function index()
     {
-        $contact = Catalogs::all();
         return view('web.galery',[
             "title"=>"Shone pager",
-            "catalogs"=> $contact
+            
         ]);
     }
 

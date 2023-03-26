@@ -14,7 +14,9 @@ class WebController extends Controller
      */
     public function index(Request $request)
     {
-        
+
+        $latest = Catalogs::query()->orderBy('created_at','desc')->limit(5)->get();
+      
         $catalogs = Catalogs::query();
         if($request->cari){
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(10);;
@@ -22,7 +24,8 @@ class WebController extends Controller
         $catalogs = $catalogs->get();
         return view('web.index',[
             "title"=>"Shone pager",
-            "catalogs"=> $catalogs
+            "catalogs"=> $catalogs,
+            "latest"=>$latest
         ]);
     }
 
