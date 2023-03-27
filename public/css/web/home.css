@@ -134,6 +134,7 @@ body{
     -webkit-box-orient: vertical;
 }
 .harga-produk{
+  font-display: center;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
     font-weight: 400; 
@@ -142,14 +143,14 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     font-weight: 400;
-    margin: 50px 50px 80px 60px;
+    margin: 80px 20px 90px;
     width: 90px;
     height: 30px;
     background-color: #00A550;
     color: white;
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .btn1:hover{
     background: white;
