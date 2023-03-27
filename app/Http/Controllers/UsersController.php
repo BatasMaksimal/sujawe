@@ -20,7 +20,7 @@ class UsersController extends Controller
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
         $users = Users::all();
-        $catalogs = $catalogs->get();
+        $catalogs = $catalogs->paginate(2);
         return view('user.post_blog_user',[
             "title"=>"Shone pager",
             "users"=> $users,

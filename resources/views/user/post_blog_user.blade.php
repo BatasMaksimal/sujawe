@@ -68,7 +68,9 @@
                     </tbody>
     
                 </table>
+                {{ $catalogs->links() }}
                 <a href="{{route('users.catalogs.create')}}"><button class="btn1">Tambah Produk</button></a>
+                
             </div>
         </div>
     </div>

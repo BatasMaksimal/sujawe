@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('admin.catalogs.index')}}">CATALOG</a>
+                    <a class="nav-link" href="{{route('users.catalogs.index')}}">CATALOG</a>
                 </li>
     
             <ul class="navbar-nav ms-auto">
