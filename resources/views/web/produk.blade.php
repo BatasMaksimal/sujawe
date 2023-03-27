@@ -12,7 +12,7 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/web/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/web/produk.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
 
@@ -25,7 +25,51 @@
 
 
     <!-- main menu -->
-   
+    <div class="home">
+            <h3 class="Catalog">Catalog<h3>   
+                <div class="sjw">
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/logo.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>sss</b></p>
+                                    <p class="card-text harga-produk">sss</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="col md-4">
+                            <div class="card-bodai">
+                                <img src="{{asset('img/logo.jpg')}}" class="card-img-top" width="1px"
+                                    height="253px">
+                                <title>Placeholder</title>
+                                <rect width="500%" height="500%" fill="#55595c" /></img>
+                                <div class="card-tampilan">
+                                    <p class="card-text judul-produk"><b>sss</b></p>
+                                    <p class="card-text harga-produk">sss</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                        </div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                </div> 
+    </div>
+
+    
+
 
     <!-- footer -->
     @include('web.footer.footer')
