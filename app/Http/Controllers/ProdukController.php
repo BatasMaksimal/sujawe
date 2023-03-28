@@ -13,11 +13,29 @@ class ProdukController extends Controller
      */
     public function index()
     {
+        $catalogs = Catalogs::query();
+        if($request->cari){
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(2);;
+        }
+        $catalogs = $catalogs->paginate(2);
         return view('web.produk',[
             "title"=>"Shone pager",
-            
+            "catalogs"=> $catalogs
         ]);
     }
+
+    public function cari($cari)
+	{
+		// mengambil data dari table pegawai sesuai pencarian data
+		$catalogs = Catalogs::where('title','like',"%".$cari."%");
+        
+        // mengirim data pegawai ke view index
+		return view('web.produk',[
+            "title"=>"Search found",
+            'catalogs' => $catalogs
+        ]);
+ 
+	}
 
     /**
      * Show the form for creating a new resource.
