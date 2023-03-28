@@ -12,6 +12,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProdukController;
 
 use App\Models\Catalogs;
 
@@ -70,6 +71,7 @@ Route::resource('/admin/catalogs', CatalogsController::class, ['as'=>'admin']);
 // WEB CATALOG
 
 Route::get('/sujawe/home', [WebController::class, 'index'])->name('home');
+Route::get('/sujawe/produk', [ProdukController::class, 'index'])->name('produk');
 Route::get('/sujawe/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/sujawe/layanan', [LayananController::class, 'index'])->name('layanan');
 Route::get('/sujawe/galery', [GaleryController::class, 'index'])->name('galery');
