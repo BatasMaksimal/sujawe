@@ -11,7 +11,7 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $catalogs = Catalogs::query();
         if($request->cari){
