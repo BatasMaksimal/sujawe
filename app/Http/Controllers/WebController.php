@@ -15,7 +15,7 @@ class WebController extends Controller
     public function index(Request $request)
     {
 
-        $latest = Catalogs::query()->orderBy('created_at','desc')->limit(5)->get();
+        $latest = Catalogs::query()->orderBy('created_at','desc')->limit(4)->get();
       
         $catalogs = Catalogs::query();
         if($request->cari){

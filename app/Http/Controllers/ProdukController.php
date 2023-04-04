@@ -13,11 +13,12 @@ class ProdukController extends Controller
      */
     public function index(Request $request)
     {
+        
         $catalogs = Catalogs::query();
         if($request->cari){
-            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(2);;
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
-        $catalogs = $catalogs->paginate(2);
+        $catalogs = $catalogs->paginate(4);
         return view('web.produk',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs

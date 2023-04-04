@@ -44,7 +44,7 @@
         <ul class="navbar-nav ms-auto">
             <li class="nav-item mt-1">
                 <div class="searchbar">
-                    <form method="POST" action="produk.php" class="d-flex">
+                    <form method="get" action="{{route('produk')}}" class="d-flex">
                         <input class="search px-2" type="search" name="cari" placeholder="Search" aria-label="Search">
                         <button class="btn btn-sm">Search
                     </form>

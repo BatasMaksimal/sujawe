@@ -36,12 +36,8 @@
 
         <div calss="display">
             <h3 class="new">Produk terbaru<h3>        
-                <div class="sjw">
-                    
+                <div class="sjw">                   
                 @foreach($latest as $catalog)       
-                    
-
-
                         <div class="col md-4">
                             <div class="card-bodai">
                                 <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"

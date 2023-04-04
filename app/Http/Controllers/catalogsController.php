@@ -18,9 +18,9 @@ class CatalogsController extends Controller
         
         $catalogs = Catalogs::query();
         if($request->cari){
-            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(2);;
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(9);;
         }
-        $catalogs = $catalogs->paginate(2);
+        $catalogs = $catalogs->paginate(15);
         return view('admin.post_blog',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
