@@ -18,7 +18,7 @@ class ProdukController extends Controller
         if($request->cari){
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
-        $catalogs = $catalogs->paginate(4);
+        $catalogs = $catalogs->paginate(15);
         return view('web.produk',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
