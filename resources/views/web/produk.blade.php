@@ -28,27 +28,36 @@
     <div class="home">
             <h3 class="Catalog">Catalog<h3>   
                 <div class="sjw">
-                        <div class="col md-4">
+                @foreach($catalogs as $catalog)      
+                <div class="col md-4">
                             <div class="card-bodai">
-                                <img src="{{asset('img/logo.jpg')}}" class="card-img-top" width="1px"
+                                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"
                                     height="253px">
                                 <title>Placeholder</title>
                                 <rect width="500%" height="500%" fill="#55595c" /></img>
                                 <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>sss</b></p>
-                                    <p class="card-text harga-produk">sss</p>
+                                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
+                                    <p class="card-text harga-produk">{{$catalog->price}}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                                            <a href=""><button type="submit" class="btn1">Detail</button></a>
                                         </div>
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
+<<<<<<< HEAD
                             </div>                            
                         </div>
 
                        
+=======
+                            </div>
+                        </div>
+                @endforeach
+                
+>>>>>>> c64c26a1001616690ad631540db9e6d74630989f
                 </div> 
+                {{ $catalogs->links() }}
     </div>
 
     

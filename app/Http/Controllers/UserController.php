@@ -17,7 +17,7 @@ class UserController extends Controller
         if($request->cari){
             $user = $user->where('username','LIKE', '%'.$request->cari.'%');
         }
-        $user = $user->paginate(2);
+        $user = $user->paginate(15);
         return view('admin.manage_user.manage_user',[
             "users"=> $user
         ]);
