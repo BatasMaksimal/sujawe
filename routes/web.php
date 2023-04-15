@@ -13,6 +13,7 @@ use App\Http\Controllers\LayananController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\DetailController;
 
 use App\Models\Catalogs;
 
@@ -76,6 +77,7 @@ Route::get('/sujawe/contact', [ContactController::class, 'index'])->name('contac
 Route::get('/sujawe/layanan', [LayananController::class, 'index'])->name('layanan');
 Route::get('/sujawe/galery', [GaleryController::class, 'index'])->name('galery');
 Route::get('/sujawe/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/sujawe/detail', [DetailController::class, 'index'])->name('detail');
 //CATALOGS
 
 
