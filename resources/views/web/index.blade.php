@@ -49,7 +49,7 @@
                                     <p class="card-text harga-produk">{{$catalog->price}}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href=""><button type="submit" class="btn1">Detail</button></a>
+                                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
                                         </div>
                                         <small class="text-muted"></small>
                                     </div>
