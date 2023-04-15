@@ -37,9 +37,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('galery')}}">Galery</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('blog')}}">Blog</a>
-            </li>
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item mt-1">

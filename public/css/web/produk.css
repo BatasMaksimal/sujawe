@@ -10,6 +10,8 @@ body{
   }
 
 
+
+
   .Catalog{
     background-color: #8AC542;
     margin-bottom: 60px;
@@ -21,6 +23,27 @@ body{
     padding-top: 14px;
     border: none;
   }
+
+/* style dropdown */
+.dropdown{
+	height: 40%;
+	margin-left: 80%;
+	border-radius: 5px;
+	-webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0!important;
+   background-image: none;
+   flex: 1;
+   padding: 0 .5em;
+   color:#0a0a0a;
+   cursor:pointer;
+   font-size: 20px;
+   font-family: 'Open Sans', sans-serif;
+}
 
   /* style produk */
 .sjw{

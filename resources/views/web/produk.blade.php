@@ -26,32 +26,42 @@
 
     <!-- main menu -->
     <div class="home">
-            <h3 class="Catalog">Catalog<h3>   
-                <div class="sjw">
-                        <div class="col md-4">
-                            <div class="card-bodai">
-                                <img src="{{asset('img/logo.jpg')}}" class="card-img-top" width="1px"
-                                    height="253px">
-                                <title>Placeholder</title>
-                                <rect width="500%" height="500%" fill="#55595c" /></img>
-                                <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>sss</b></p>
-                                    <p class="card-text harga-produk">sss</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href=""><button type="submit" class="btn1">Beli</button></a>
-                                        </div>
-                                        <small class="text-muted"></small>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
+        <h3 class="Catalog">Catalog<h3>
+                <div class="dropdown">
+                    <button type="button" class="form-select mt-3" data-bs-toggle="dropdown">
+                        Categories
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Buku SMA</a></li>
+                        <li><a class="dropdown-item" href="#">Buku SMP</a></li>
+                        <li><a class="dropdown-item" href="#">Peralatan Sekolah</a></li>
+                    </ul>
+                </div>
 
-                       
-                </div> 
+    <div class="sjw">
+        <div class="col md-4">
+            <div class="card-bodai">
+                <img src="{{asset('img/logo.jpg')}}" class="card-img-top" width="1px" height="253px">
+                <title>Placeholder</title>
+                <rect width="500%" height="500%" fill="#55595c" /></img>
+                <div class="card-tampilan">
+                    <p class="card-text judul-produk"><b>sss</b></p>
+                    <p class="card-text harga-produk">sss</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href=""><button type="submit" class="btn1">Beli</button></a>
+                        </div>
+                        <small class="text-muted"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
     </div>
 
-    
+
 
 
     <!-- footer -->
