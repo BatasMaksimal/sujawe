@@ -80,6 +80,51 @@ ul {
     background-color: #ffffff;
 }
 
+@media screen and (max-width: 1080px) {
+    
+    .container {
+        width: 100%;
+    }
+    .left {
+        width: 25%;
+        background-color: #89d0ff;
+    }
+    .middle {
+        width: 68%;
+        float: right;
+    }
+    
+    .right {
+        clear: both;
+        padding: 1% 4%;
+        width: auto;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    
+    .header, 
+    .footer{
+        text-align: center;
+    }
+    .left {
+        width: auto;
+        float: none;
+    }
+    
+    .middle {
+        width: auto;
+        float: none;
+    }
+    
+    .right {
+        width: auto;
+        float: none;
+    }
+
+}
+
 @media(max-width: 767px) {
     .footer-col {
         width: 50%;

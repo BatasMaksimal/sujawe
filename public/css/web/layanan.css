@@ -1,0 +1,64 @@
+body{
+    background-color: #F4ECEC;
+  }
+  
+.home{
+      background-color: white;
+      margin-left: 8%;
+      margin-right: 8%;
+      padding-bottom: 40%;
+  }
+
+.home img {
+    width: 30%;
+    margin-left: 5%;
+    padding-bottom: 10%;
+    position: relative;
+  }
+
+
+.home .Layanan{
+  position: absolute;
+  left: 42%;
+  bottom: 50%;
+  color: #8AC542;
+}
+
+.home .Layanan h3{
+    position: absolute;
+    bottom: 100%;
+    color: #00A550;
+  }
+  
+.Layanan {
+    position: relative;
+    width: 50%;
+    
+  }
+
+.kontak img{
+    width: 200%;
+}
+
+.home .produk{
+    position: absolute;
+    left: 13%;
+    color: #8AC542;
+  }
+
+  .home .produk h3{
+    position: absolute;
+    left: 5%;
+    bottom:100%;
+    color: #00A550;
+  }
+
+  .home .embed{
+    position: absolute;
+  left: 46%;
+  top: 62%;
+  }
+
+
+
+
