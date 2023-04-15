@@ -21,7 +21,6 @@ body{
   position: absolute;
   left: 42%;
   bottom: 50%;
-  color: #8AC542;
 }
 
 .home .Layanan h3{
@@ -43,7 +42,6 @@ body{
 .home .produk{
     position: absolute;
     left: 13%;
-    color: #8AC542;
   }
 
   .home .produk h3{
