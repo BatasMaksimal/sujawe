@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Catalogs;
 use Illuminate\Http\Request;
-use Illuminate\Http\Catalogs;
+
 
 class GaleryController extends Controller
 {
@@ -12,11 +12,16 @@ class GaleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $catalogs = Catalogs::query();
+        if($request->cari){
+            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
+        }
+        $catalogs = $catalogs->paginate(15);
         return view('web.galery',[
             "title"=>"Shone pager",
-            
+            "catalogs"=> $catalogs
         ]);
     }
 
