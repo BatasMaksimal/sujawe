@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Catalogs extends Model
 {
-    protected $fillable = ['title','description','price','image','created_at','updated_at'];
+    protected $fillable = ['title','description','price','image','created_at','updated_at','kategori'];
     
     protected $table = 'catalogs';
 

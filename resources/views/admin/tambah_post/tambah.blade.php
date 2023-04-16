@@ -38,12 +38,15 @@
                 <!-- kategori -->
                 <div class="mb-2">
                     <label class="form-label">Kategori Produk :</label>
-                    <select name="kategori" class="form-control" required>
-                        <option></option>
-                        <option>buku smp</option>
-                        <option>buku sma</option>
-                        <option>peralatan sekolah</option>
-                    </select>
+                    <?php
+                        $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','peralatan sekolah'=>'Peralatan Sekolah');
+                    ?>
+                                <select type="text" name="kategori" class="form-control my-2 p-2" class="form-control form"
+                                    placeholder="KATEGORI" required>
+                                    <?php foreach ($arr_kategori as $key_kategori => $val_kategori):?>
+                                    <option value="<?=$key_kategori?>"><?=$val_kategori?></option>
+                                    <?php endforeach ?>
+                                </select>
                 </div>
                 <!-- Harga Produk -->
                 <div class="mb-2">

@@ -40,10 +40,10 @@
                 <div class="mb-2">
                     <label class="form-label">Kategori Produk :</label>
                     <select name="kategori" class="form-control" required>
-                        <option></option>
-                        <option>buku smp</option>
-                        <option>buku sma</option>
-                        <option>peralatan sekolah</option>
+                    <option value="">-</option>
+                        <option value="Buku SMP" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku SMP'}}">Buku SMP</option>
+                        <option value="Buku SMA" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku SMA'}}">Buku SMA</option>
+                        <option value="Peralatan Sekolah" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Peralatan Sekolah'}}">Peralatan Sekolah</option>
                     </select>
                 </div>
                 <!-- Harga Produk -->

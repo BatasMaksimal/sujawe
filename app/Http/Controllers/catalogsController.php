@@ -66,7 +66,8 @@ class CatalogsController extends Controller
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'kategori' => 'required'
         ]);
         
 
@@ -86,7 +87,9 @@ class CatalogsController extends Controller
                 "title" => $request->get('title'),
                 "description" => $request->get('description'),
                 "price" => $request->get('price'),
+                "kategori" => $request->get('kategori'),
                 "image" => $request->file('image')->hashName()
+                
             ]);
             
             $product->save(); // Finally, save the record.

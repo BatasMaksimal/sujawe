@@ -28,14 +28,15 @@
     <div class="home">
         <h3 class="Catalog">Catalog<h3>
                 <div class="dropdown">
-                    <button type="button" class="form-select mt-3" data-bs-toggle="dropdown">
-                        Categories
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Buku SMA</a></li>
-                        <li><a class="dropdown-item" href="#">Buku SMP</a></li>
-                        <li><a class="dropdown-item" href="#">Peralatan Sekolah</a></li>
-                    </ul>
+                <?php
+                        $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','peralatan sekolah'=>'Peralatan Sekolah');
+                    ?>
+                                <select type="text" name="kategori" class="form-control my-2 p-2" class="form-control form"
+                                    placeholder="KATEGORI" required>
+                                    <?php foreach ($arr_kategori as $key_kategori => $val_kategori):?>
+                                    <option value="<?=$key_kategori?>"><?=$val_kategori?></option>
+                                    <?php endforeach ?>
+                                </select>
                 </div>
 
     <div class="sjw">
