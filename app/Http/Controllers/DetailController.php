@@ -18,7 +18,7 @@ class DetailController extends Controller
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(10);;
         }
         $catalogs = $catalogs->get();
-        return view('web.produk',[
+        return view('web.detail',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs,
             
