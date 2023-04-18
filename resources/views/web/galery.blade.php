@@ -26,35 +26,29 @@
 
     <!-- main menu -->
     <div class="home">
-            <h3 class="Catalog">Galery<h3>   
-            <div class="sjw">
-    @foreach($catalogs as $catalog)       
-                        <div class="col md-4">
-                            <div class="card-bodai">
-                                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"
-                                    height="253px">
-                                <title>Placeholder</title>
-                                <rect width="500%" height="500%" fill="#55595c" /></img>
-                                <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
-                                    <p class="card-text harga-produk">{{$catalog->price}}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
-                                        </div>
-                                        <small class="text-muted"></small>
-                                    </div>
-                                </div>
-                            </div>
+        <h3 class="Catalog">Galery<h3>
+                <div class="galery-grid">
+                    @foreach($catalogs as $catalog)
+                    <div>
+                        <img src="{{asset('storage/catalogs/'.$catalog->image)}}"
+                            style="width: 100%;height: 200px;object-fit:cover;">
+                        <title>Placeholder</title>
+                        <div>
+                            <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
+                            <p class="card-text harga-produk">{{$catalog->price}}</p>
                         </div>
+                    </div>
+                    @endforeach
+                </div>
+             
+    </div>
 
-                @endforeach
 
 
     </div>
     </div>
 
-    
+
 
 
     <!-- footer -->

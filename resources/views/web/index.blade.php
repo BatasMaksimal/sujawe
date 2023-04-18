@@ -21,53 +21,53 @@
 
 
     <!-- navbar -->
-    @include('web.navbar.navbar')
+
+
 
 
     <!-- main menu -->
-    <div class="home">
-
-        <div class="sujawe">
-            <img src="{{asset('img/sujinawa-05.jpg')}}" alt="Snow">
-            <button class="btn2" href="{{route('contact')}}">
-                <a href="{{route('contact')}}">Hubungi Kami</a>
+        @include('web.navbar.navbar')
+        <div class="home">
+            <div class="sujawe">
+                <img src="{{asset('img/sujinawa-05.jpg')}}" alt="Snow">
+            </div>
+            <button class="btn-contact  " href="{{route('contact')}}">
+                    <a class="btn-font" href="{{route('contact')}}">Hubungi Kami</a>
             </button>
-        </div>
 
-        <div calss="display">
-            <h3 class="new">Produk terbaru<h3>        
-                <div class="sjw">                   
-                @foreach($latest as $catalog)       
-                        <div class="col md-4">
-                            <div class="card-bodai">
-                                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"
-                                    height="253px">
-                                <title>Placeholder</title>
-                                <rect width="500%" height="500%" fill="#55595c" /></img>
-                                <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
-                                    <p class="card-text harga-produk">{{$catalog->price}}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
-                                        </div>
-                                        <small class="text-muted"></small>
-                                    </div>
-                                </div>
+            <h3 class="new">Produk terbaru<h3>
+
+            <div class="product-grid">
+                @foreach($latest as $catalog)
+                 <div>
+                    <img src="{{asset('storage/catalogs/'.$catalog->image)}}" style="width: 100%;height: 200px;object-fit:cover;">
+                    <title>Placeholder</title>
+                    <div class="card-tampilan">
+                        <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
+                        <p class="card-text harga-produk">{{$catalog->price}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{{route('detail')}}"><button type="submit"
+                                        class="btn1">Detail</button></a>
                             </div>
+                            <small class="text-muted"></small>
                         </div>
-
+                    </div>
+                </div>
                 @endforeach
+            </div>
 
-                </div>                           
+          
         </div>
-    </div>
-
+        @include('web.footer.footer')
     
 
 
+
+
+
     <!-- footer -->
-    @include('web.footer.footer')
+
 
 
     <!-- JavaScript Bundle with Popper -->

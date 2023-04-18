@@ -26,41 +26,46 @@
 
     <!-- main menu -->
     <div class="home">
-        <h3 class="Catalog">Catalog<h3>
-                <div class="dropdown">
-                    <button type="button" class="form-select mt-3" data-bs-toggle="dropdown">
-                        Categories
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Buku SMA</a></li>
-                        <li><a class="dropdown-item" href="#">Buku SMP</a></li>
-                        <li><a class="dropdown-item" href="#">Peralatan Sekolah</a></li>
-                    </ul>
+        <div class="catalog">
+            <h3>Catalog<h3>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="form-select mt-3" data-bs-toggle="dropdown">
+                Categories
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Buku SMA</a></li>
+                <li><a class="dropdown-item" href="#">Buku SMP</a></li>
+                <li><a class="dropdown-item" href="#">Peralatan Sekolah</a></li>
+            </ul>
+        </div>
+
+        <div class="product-grid">
+            @foreach($catalogs as $catalog)
+            <div>
+                <img src="{{asset('storage/catalogs/'.$catalog->image)}}"
+                    style="width: 100%;height: 200px;object-fit:cover;">
+                <title>Placeholder</title>
+                <div>
+                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
+                    <p class="card-text harga-produk">{{$catalog->price}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
+                        </div>
+                        <small class="text-muted"></small>
+                    </div>
                 </div>
 
-    <div class="sjw">
-    @foreach($catalogs as $catalog)       
-                        <div class="col md-4">
-                            <div class="card-bodai">
-                                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="card-img-top" width="1px"
-                                    height="253px">
-                                <title>Placeholder</title>
-                                <rect width="500%" height="500%" fill="#55595c" /></img>
-                                <div class="card-tampilan">
-                                    <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
-                                    <p class="card-text harga-produk">{{$catalog->price}}</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
-                                        </div>
-                                        <small class="text-muted"></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                @endforeach
+            </div>
 
+
+            @endforeach
+        </div>
+            <a href="#" class="previous">&laquo; Previous</a>
+            <a href="#" class="next">Next &raquo;</a>
 
     </div>
     </div>

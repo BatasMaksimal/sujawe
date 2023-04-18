@@ -1,14 +1,16 @@
 body{
-    background-color: #F4ECEC;
-  }
-  
-.home{
-      background-color: white;
-      margin-left: 8%;
-      margin-right: 8%;
-      padding-bottom:20%;
-  }
+  background-color: #F4ECEC;
+    /* margin-left: 8%;
+    margin-right: 8%;   */
+}
 
+.home{
+    background-color: white;
+    width: 80%;
+    margin:auto;
+    padding-bottom: 10px;
+     
+}
 
 
 
@@ -96,4 +98,39 @@ body{
 }
 
 
- 
+ /* Mengatur tampilan untuk layar sedang */
+@media (min-width: 576px) {
+  
+  .home  {
+      width: 80%;
+  }
+}
+
+@media (min-width: 768px){
+
+  .galery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  
+  }
+
+  /* Mengatur tampilan untuk layar besar */
+@media (min-width: 992px) {
+
+  .home {
+      width: 80%;
+  }
+}
+
+
+@media (min-width: 992px){
+
+.galery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+}
