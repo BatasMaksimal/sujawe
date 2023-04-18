@@ -23,6 +23,9 @@ class ProdukController extends Controller
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
         ]);
+        $catalogs->when($request->kategori, function($query) use($request){
+            return $query->whereKategori($request->kategori);
+        });
     }
 
     public function cari($cari)
