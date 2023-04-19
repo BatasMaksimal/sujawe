@@ -29,24 +29,24 @@
         <img src="{{asset('img/sujinawa-04.jpg')}}" alt="Snow">
         <div class="kontak">
             <h3>OFFICE</h3>
-            <p>sujawe.innawa@gmail.com
-            <p>
-            <p>0812-4263-0376
-            <p>
-            <p>Jl. Semolowaru Utara III No.31, Semolowaru, Kec. Sukolilo, Kota Surabaya, Jawa Timur 60111
-            <p>
+            <h6>sujawe.innawa@gmail.com
+</h6>
+            <h6>0812-4263-0376
+</h6>
+            <h6>Jl. Semolowaru Utara III No.31, Semolowaru, Kec. Sukolilo, Kota Surabaya, Jawa Timur 60111
+</h6>
                   
         </div>
         
         
-        <button class="btn-kontak  " href="{{route('contact')}}">
-                    <a class="btn-font" href="{{route('contact')}}">Hubungi Kami</a>
+        <button class="bttn-kontak  " href="{{route('contact')}}">
+                    <a class="bttn-font" href="{{route('contact')}}">Hubungi Kami</a>
         </button>
 
         <div class="embed">
             <iframe
          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.48724531744!2d112.77540789999999!3d-7.2990249999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa5a72e83879%3A0x47a3ec4e8d7e8f7e!2sCV%20Sujawe%20Ininnawa!5e0!3m2!1sid!2sid!4v1681718714822!5m2!1sid!2sid"
-                width="900" height="750" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                width="900" height="450" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 

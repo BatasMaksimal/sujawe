@@ -26,7 +26,6 @@
 
     <!-- main menu -->
     <div class="home">
-            <img src="{{asset('img/ProdukdanLayanan1.jpg')}}" alt="Snow">
             <div class="Layanan">
                 <h3>Tentang Kami</h3>
                 <p>Selamat datang di website resmi kami www.bestchoicebookstore.com. Kami adalah distributor buku pemerintah kurikulum 2013 dan distributor LKS dari berbagai penerbit untuk tingkat SD/MI, SMP/MTs, SMA/MA dan SMK. Harga yang kami tawaran sangatlah terjangkau bagi anda  yang ingin memasarkan LKS dari kami atau bagi pihak sekolah yang ingin langsung menggunakan LKS terus untuk pembelajaran di sekolah. Pelayanan kami meliputi seluruh Indonesia mulai dari Sabang sampai Merauke. Kami bekerjasama dengan berbagai ekspedisi untuk mengirimkan buku dan LKS. Kami memfokuskan bisnis pada segmen kebutuhan Pendidikan terutama untuk masalah Buku paket dan buku LKS. Selain itu, kami juga melayani kebutuhan sekolah yang lain yang terangkum dalam http://www.supplierperlengkapansekolah.com.<p>
@@ -34,7 +33,7 @@
 
              <div class="produk">
                 <h3>Pelayanan kami meliputi</h3>
-                <ol>
+                <ol class="pelayanan">
                     <li>LKS (LEMBAR KERJA SISWA)</li>
                     <li>BUKU KURIKULUM 2013 EDISI REVISI</li>
                     <li>BUKU PAI 2020 (MI, MTs, MA)</li>
@@ -60,7 +59,7 @@
             </div>   
 
             <div class="embed">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/r7TYA7UcQlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            <iframe width="560" height="315" style="border:0; width: 100%;" src="https://www.youtube.com/embed/r7TYA7UcQlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
             </div>
     </div>
 
