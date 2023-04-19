@@ -28,15 +28,18 @@
     <div class="home">
         <h3 class="Catalog">Catalog<h3>
                 <div class="dropdown">
+                    <form action="" method="get" id="formkategori">
                 <?php
                         $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','peralatan sekolah'=>'Peralatan Sekolah');
                     ?>
-                                <select type="text" name="kategori" class="form-control my-2 p-2" class="form-control form"
+                                <select onchange="document.getElementById('formkategori').submit()"  name="kategori" class="form-control my-2 p-2" class="form-control form"
                                     placeholder="KATEGORI" required>
+                                    <option value="">All</option>
                                     <?php foreach ($arr_kategori as $key_kategori => $val_kategori):?>
-                                    <option value="<?=$key_kategori?>"><?=$val_kategori?></option>
+                                    <option @if($key_kategori === request('kategori')) selected @endif value="<?=$key_kategori?>"><?=$val_kategori?></option>
                                     <?php endforeach ?>
                                 </select>
+                                </form>
                 </div>
 
     <div class="sjw">
@@ -64,10 +67,11 @@
 
 
     </div>
+    {{ $catalogs->links() }}
     </div>
 
 
-
+   
 
     <!-- footer -->
     @include('web.footer.footer')

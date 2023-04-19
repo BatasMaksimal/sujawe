@@ -18,14 +18,20 @@ class ProdukController extends Controller
         if($request->cari){
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
+        
+        $catalogs->when($request->kategori, function($query) use($request){
+            return $query->whereKategori($request->kategori);
+        });
+        
+
         $catalogs = $catalogs->paginate(15);
+
+
         return view('web.produk',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs
         ]);
-        $catalogs->when($request->kategori, function($query) use($request){
-            return $query->whereKategori($request->kategori);
-        });
+      
     }
 
     public function cari($cari)
