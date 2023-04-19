@@ -1,13 +1,15 @@
 body{
-    background-color: #F4ECEC;
-  }
-  
-.home{
-      background-color: white;
-      margin-left: 8%;
-      margin-right: 8%;
-  }
+  background-color: #F4ECEC;
+    /* margin-left: 8%;
+    margin-right: 8%;   */
+}
 
+.home{
+    background-color: white;
+    width: 80%;
+    margin:auto;
+    padding-bottom: 15%;
+}
 .home img {
     width: 100%;
     position: relative;
@@ -28,16 +30,123 @@ body{
   position: absolute;
   right: 35em;
   top: 300px;
-  
   color: #8AC542;
+}
+
+.btn-kontak {
+  position: relative;
+  top: -170px;
+  left:23px;
+  display: block;
+  background-color: #00A550;
+  color: white;
+  font-size: 16px;
+  padding: 10px 64px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.home .embed{
+  padding-right: 20px;
+  padding-top: 10%;
+  margin-left: 11%;
 }
 
 .kontak {
     position: relative;
     width: 50%;
+    top:100%;
   }
 
 .kontak img{
     width: 200%;
 }
+
+
+
+
+@media (max-width: 576px) {
+
+  .home  {
+      margin-bottom: 10px;
+  }
+
+  .new{
+    height: 30px;
+    padding-left: 10%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btn-contact{
+    height: 40px;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-font{
+    font-size: 16px;
+  }
+ 
+
+}
+
+/* Mengatur tampilan untuk layar sedang */
+@media (min-width: 576px) {
+  
+  .home  {
+      width: 80%;
+  }
+}
+
+@media (min-width: 768px){
+  .home .kontak{
+    left: 12%;
+    top:20%;
+    font-size: 1.6vw;
+  }
+  .btn-kontak{
+    top: -50px;
+    left:20px;
+  }
+  
+  .home .embed{
+    padding-right: 30px;
+    margin-right: 20px;
+}
+  
+  
+  }
+
+
+  /* Mengatur tampilan untuk layar besar */
+@media (min-width: 992px) {
+
+  .home {
+      width: 80%;
+  }
+}
+
+@media (min-width: 992px){
+  .home .kontak{
+    left: 12%;
+    top:24%;
+    font-size: 1.2vw;
+    width: 30%;
+  }
+
+  .btn-kontak{
+    top: -95px;
+    left:20px;
+  }
+}
+
+
+
+
+
+
 
