@@ -27,11 +27,10 @@
     <!-- main menu -->
     <div class="home">
         <h3 class="Catalog">Detail Produk<h3>
-        <div class="card mb-3" style="max-width: 100%;">
-        
+        <div class="card mb-3" style="max-width: 100%;">        
         <div class="row g-2">
             <div class="col-md-4 mt-6 pt-2 mx-4">
-            <img src="{{asset('img/book1.jpg')}}" class="img-fluid rounded-start" alt="..." >
+            <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="img-fluid rounded-start" alt="..." >
             </div>
             <div class="col-md-7">
             <div class="card-body">
@@ -41,21 +40,25 @@
                     <tbody>
                         <tr>
                             <td>Nama Produk</td>
+                            <td>{{$catalog->title}}</td>
                         </tr>
                         <tr>
                             <td>Deskripsi</td>
+                            <td>{{$catalog->description}}</td>
                         </tr>
                         <tr>
                             <td>Kategori</td>
+                            <td>{{$catalog->kategori}}</td>
                         </tr>
                         <tr>
                             <td>Harga</td>
+                            <td>{{$catalog->price}}</td>
                         </tr>
                     </tbody>
                 </table>
             </form>
             </div>
-            </div>
+            </div>            
         </div>
 
         

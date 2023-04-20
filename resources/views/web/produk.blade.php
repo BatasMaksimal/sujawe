@@ -53,7 +53,7 @@
                     <p class="card-text harga-produk">{{$catalog->price}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a href="{{route('detail')}}"><button type="submit" class="btn1">Detail</button></a>
+                            <a href="{{route('detail', ['id'=>$catalog->id])}}"><button type="submit" class="btn1">Detail</button></a>
                         </div>
                         <small class="text-muted"></small>
                     </div>
@@ -64,12 +64,10 @@
 
 
             @endforeach
-        </div>
-            <a href="#" class="previous">&laquo; Previous</a>
-            <a href="#" class="next">Next &raquo;</a>
-
+        </div>            
+        {{ $catalogs->links('vendor.pagination.bootstrap-4') }}
     </div>
-    {{ $catalogs->links() }}
+   
     </div>
 
 

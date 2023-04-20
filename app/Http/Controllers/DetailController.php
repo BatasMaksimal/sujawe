@@ -11,16 +11,13 @@ class DetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request, $id)
     {
-        $catalogs = Catalogs::query();
-        if($request->cari){
-            $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%')->paginate(10);;
-        }
-        $catalogs = $catalogs->get();
+        $catalog = Catalogs::query()->findOrFail($id);
+        
         return view('web.detail',[
             "title"=>"Shone pager",
-            "catalogs"=> $catalogs,
+            "catalog"=> $catalog,
             
         ]);
     }

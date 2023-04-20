@@ -39,12 +39,15 @@
                         </div>
                     </div>
                     @endforeach
+                    {{ $catalogs->links('vendor.pagination.bootstrap-4') }}
                 </div>
-             
+                
+    </div>
+    
     </div>
 
 
-
+    
     </div>
     </div>
 
