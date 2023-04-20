@@ -167,6 +167,8 @@ body{
     color: #8AC542;
     border: 1px solid;
 }
+
+
   /* Mengatur tampilan untuk layar kecil */
 
 @media (max-width: 576px) {
@@ -246,5 +248,26 @@ body{
   margin-bottom: 50px;
 }
 
+
+}
+
+@media (min-width: 1440px){
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;  
+    overflow: hidden;
+  }
+
+  .product-grid img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .product-grid img:hover{
+    transform: scale(1.1);
+  }
 
 }

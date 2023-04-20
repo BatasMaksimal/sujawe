@@ -31,6 +31,7 @@ body{
     color: #101010;
     margin-left: 20%;
     margin-right: 20%;
+    overflow: hidden;
 }
 td{
     font-family: 'Source Sans Pro', sans-serif;
@@ -38,3 +39,11 @@ td{
     font-weight: 400; 
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid:hover {
+  transform: scale(1.2);
+}
