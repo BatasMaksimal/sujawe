@@ -26,7 +26,9 @@
 
     <!-- main menu -->
     <div class="home">
-        <h3 class="Catalog">Catalog<h3>
+    <div class="section-title">
+          <h2>Catalog</h2>
+        </div>
                 <div class="dropdown">
                     <form action="" method="get" id="formkategori">
                 <?php
@@ -66,15 +68,17 @@
             @endforeach
         </div>            
         {{ $catalogs->links('vendor.pagination.bootstrap-4') }}
+
+        @include('web.footer.footer')
     </div>
-   
+    
     </div>
 
 
    
 
     <!-- footer -->
-    @include('web.footer.footer')
+    
 
 
     <!-- JavaScript Bundle with Popper -->

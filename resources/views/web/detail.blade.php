@@ -26,50 +26,61 @@
 
     <!-- main menu -->
     <div class="home">
-        <h3 class="Catalog">Detail Produk<h3>
-        <div class="card mb-3" style="max-width: 100%;">        
-        <div class="row g-2">
-            <div class="col-md-4 mt-6 pt-2 mx-4">
-            <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="img-fluid rounded-start" alt="..." >
+    <div class="section-title">
+          <h2>Detail</h2>
+        </div>
+        
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                <img src="{{asset('storage/catalogs/'.$catalog->image)}}" class="img-fluid rounded-start" alt="...">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="col-md-7">
-            <div class="card-body">
-                <table class="table">
-                    <thead>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nama Produk</td>
-                            <td>{{$catalog->title}}</td>
-                        </tr>
-                        <tr>
-                            <td>Deskripsi</td>
-                            <td>{{$catalog->description}}</td>
-                        </tr>
-                        <tr>
-                            <td>Kategori</td>
-                            <td>{{$catalog->kategori}}</td>
-                        </tr>
-                        <tr>
-                            <td>Harga</td>
-                            <td>{{$catalog->price}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Nama produk</strong>: {{$catalog->title}}</li>
+                <li><strong>Kategori</strong>: {{$catalog->kategori}}</li>
+                <li><strong>Harga</strong>: {{$catalog->price}}</li>
+              </ul>
             </div>
-            </div>            
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+              {{$catalog->description}}
+              </p>
+            </div>
+          </div>
+
         </div>
 
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+
         
-    </div>
+        @include('web.footer.footer')
     </div>
 
 
 
 
     <!-- footer -->
-    @include('web.footer.footer')
+
 
 
     <!-- JavaScript Bundle with Popper -->

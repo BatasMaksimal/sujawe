@@ -26,7 +26,9 @@
 
     <!-- main menu -->
     <div class="home">
-        <h3 class="Catalog">Galery<h3>
+    <div class="section-title">
+          <h2>Galery</h2>
+        </div>
                 <div class="galery-grid">
                     @foreach($catalogs as $catalog)
                     <div>
@@ -39,23 +41,18 @@
                         </div>
                     </div>
                     @endforeach
-                    {{ $catalogs->links('vendor.pagination.bootstrap-4') }}
+                    
                 </div>
-                
+                {{ $catalogs->links('vendor.pagination.bootstrap-4') }}
+                @include('web.footer.footer')
     </div>
     
-    </div>
-
-
     
-    </div>
-    </div>
-
 
 
 
     <!-- footer -->
-    @include('web.footer.footer')
+  
 
 
     <!-- JavaScript Bundle with Popper -->

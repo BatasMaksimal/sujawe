@@ -8,10 +8,41 @@ body{
     background-color: white;
     width: 80%;
     margin:auto;
-    padding-bottom: 8%;
 }
 
+.section-title {
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  line-height: 1;
+  margin: 0;
+  background: #fdeff2;
+  color: #00A550;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
 
+.section-title h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-title h3 span {
+  color: #00A550;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 600;
+}
 
   .Catalog{
     background-color: #8AC542;
@@ -138,7 +169,6 @@ a:hover {
 @media (max-width: 576px) {
 
   .home  {
-      padding-bottom: 40%;
   }
 
   .new{
@@ -182,7 +212,21 @@ a:hover {
 
 }
 
+@media (min-width: 300px){
+
+  .product-grid {
+    margin-left: 10px;
+    margin-right: 10px ;
+  }
+  
+
+  
+  }
+  
+
 /* Mengatur tampilan untuk layar sedang */
+
+
 @media (min-width: 576px) {
   
   .home {
@@ -193,13 +237,14 @@ a:hover {
 @media (min-width: 768px){
 
   .home{
-    padding-bottom: 20%;
 }
 
   .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .new{
@@ -227,7 +272,6 @@ a:hover {
   .home {
       width: 80%;
       
-    padding-bottom: 15%;
   }
 
   
