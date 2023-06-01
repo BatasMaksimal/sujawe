@@ -24,7 +24,7 @@ class ProdukController extends Controller
         });
         
 
-        $catalogs = $catalogs->paginate(15);
+        $catalogs = $catalogs->paginate(8);
 
 
         return view('web.produk',[
