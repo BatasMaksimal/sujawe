@@ -65,7 +65,7 @@ class CatalogsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'price' => 'required',
+           
             'image' => 'required',
             'kategori' => 'required'
         ]);
@@ -86,7 +86,7 @@ class CatalogsController extends Controller
             $product = new Catalogs([
                 "title" => $request->get('title'),
                 "description" => $request->get('description'),
-                "price" => $request->get('price'),
+                
                 "kategori" => $request->get('kategori'),
                 "image" => $request->file('image')->hashName()
                 
@@ -133,7 +133,7 @@ class CatalogsController extends Controller
          $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            // 'price' => 'required',
             'image' => 'required'
         ]);
 
@@ -141,7 +141,7 @@ class CatalogsController extends Controller
         $product = [
             "title" => $request->get('title'),
             "description" => $request->get('description'),
-            "price" => $request->get('price'),
+            // "price" => $request->get('price'),
             "image" => $request->file('image')->hashName()
         ];
         Catalogs::whereId($id)->update( $product);
