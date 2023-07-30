@@ -18,7 +18,7 @@ class GaleryController extends Controller
         if($request->cari){
             $catalogs = $catalogs->where('title','LIKE', '%'.$request->cari.'%');
         }
-        $catalogs = $catalogs->paginate(15);
+        $catalogs = $catalogs->paginate(12);
         return view('web.galery',[
             "title"=>"Shone pager",
             "catalogs"=> $catalogs

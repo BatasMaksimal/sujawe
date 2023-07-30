@@ -122,7 +122,7 @@
                         <title>Placeholder</title>
                         <div class="card-tampilan">
                             <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
-                            <p class="card-text harga-produk">{{$catalog->price}}</p>
+                            <p class="card-text harga-produk">{{$catalog->description}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="{{route('detail', ['id'=>$catalog->id])}}"><button type="submit"

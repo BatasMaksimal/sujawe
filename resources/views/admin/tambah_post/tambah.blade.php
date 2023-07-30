@@ -22,7 +22,7 @@
 
 <div class="container">
         <div class="content my-3">
-            <h3 class=" mb-2 text-center">Update Post</h3>
+            <h3 class=" mb-2 text-center">Tambah Post</h3>
             <form action="{{route('admin.catalogs.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <!-- Nama Produk -->
@@ -39,20 +39,18 @@
                 <div class="mb-2">
                     <label class="form-label">Kategori Produk :</label>
                     <?php
-                        $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','peralatan sekolah'=>'Peralatan Sekolah');
+                        $arr_kategori=array('kategori1'=>'Kategori 1','kategori2'=>'Kategori 2','kategori3'=>'Kategori 3','kategori4'=>'Kategori 4','kategori5'=>'Kategori 5','kategori6'=>'Kategori 6');
                     ?>
                                 <select type="text" name="kategori" class="form-control my-2 p-2" class="form-control form"
                                     placeholder="KATEGORI" required>
+                                    <option value="">All</option>
                                     <?php foreach ($arr_kategori as $key_kategori => $val_kategori):?>
                                     <option value="<?=$key_kategori?>"><?=$val_kategori?></option>
                                     <?php endforeach ?>
                                 </select>
                 </div>
                 <!-- Harga Produk -->
-                <div class="mb-2">
-                    <label class="form-label">Harga Produk :</label>
-                    <input type="double" name="price" class="form-control" placeholder="Masukkan Harga Produk" required>
-                </div>
+                
                 <!-- Foto Produk -->
                 <div class="mb-4">
                     <label for="formFile" class="form-label">Foto Produk :</label>

@@ -34,7 +34,7 @@
                 <!-- deskripsi Produk -->
                 <div class="mb-2">
                     <label class="form-label">Deskripsi Produk :</label>
-                    <textarea name="description" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required value="{{ $catalogs->description}}"></textarea>
+                    <input name="description" class="form-control textarea" rows="4" placeholder="Masukkan Deskripsi Produk" required value="{{ $catalogs->description}}">
                 </div>
                 <!-- kategori -->
                 <div class="mb-2">
@@ -43,20 +43,22 @@
                     <option value="">-</option>
                         <option value="Buku SMP" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku SMP'}}">Buku SMP</option>
                         <option value="Buku SMA" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku SMA'}}">Buku SMA</option>
-                        <option value="Peralatan Sekolah" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Peralatan Sekolah'}}">Peralatan Sekolah</option>
+                        <option value="Buku SD" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku SD'}}">Buku SD</option>
+                        <option value="Buku Guru" selected="{{isset($_GET['kategori']) && $_GET['kategori'] == 'Buku Guru'}}">Buku Guru</option>
+                        
                     </select>
                 </div>
                 <!-- Harga Produk -->
-                <div class="mb-2">
+                <!-- <div class="mb-2">
                     <label class="form-label">Harga Produk :</label>
                     <input type="double" name="price" class="form-control" placeholder="Masukkan Harga Produk" required value="{{ $catalogs->price}}">
-                </div>
+                </div> -->
                 <!-- Foto Produk -->
                 <div class="mb-4">
                     <label for="formFile" class="form-label">Foto Produk :</label>
-                    <input class="form-control" type="file" name="image" value="{{ $catalogs->image}}">
+                    <input  class="form-control" type="file" name="image" required value="{{ $catalogs->image}}">
                 </div>
-                <input type = "submit" name ="simpan" value ="Tambah Produk" class = "btn1 mb-2">
+                <input type = "submit" name ="simpan" value ="Edit Produk" class = "btn1 mb-2">
             </form>
         </div>
     </div>

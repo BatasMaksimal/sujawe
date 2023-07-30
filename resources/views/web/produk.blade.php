@@ -32,7 +32,7 @@
                 <div class="dropdown">
                     <form action="" method="get" id="formkategori">
                 <?php
-                        $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','peralatan sekolah'=>'Peralatan Sekolah');
+                        $arr_kategori=array('kategori1'=>'Kategori 1','kategori2'=>'Kategori 2','kategori3'=>'Kategori 3','kategori4'=>'Kategori 4','kategori5'=>'Kategori 5','kategori6'=>'Kategori 6');
                     ?>
                                 <select onchange="document.getElementById('formkategori').submit()"  name="kategori" class="form-control my-2 p-2" class="form-control form"
                                     placeholder="KATEGORI" required>
@@ -52,7 +52,7 @@
                 <title>Placeholder</title>
                 <div>
                     <p class="card-text judul-produk"><b>{{$catalog->title}}</b></p>
-                    <p class="card-text harga-produk">{{$catalog->price}}</p>
+                    <p class="card-text harga-produk">{{$catalog->description}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a href="{{route('detail', ['id'=>$catalog->id])}}"><button type="submit" class="btn1">Detail</button></a>
