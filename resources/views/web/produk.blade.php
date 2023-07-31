@@ -32,7 +32,7 @@
                 <div class="dropdown">
                     <form action="" method="get" id="formkategori">
                 <?php
-                        $arr_kategori=array('buku smp'=>'Buku SMP','buku sma'=>'Buku SMA','buku sd'=>'Buku SD','buku guru'=>'Buku Guru');
+                        $arr_kategori=array('kategori1'=>'Kategori 1','kategori2'=>'Kategori 2','kategori3'=>'Kategori 3','kategori4'=>'Kategori 4','kategori5'=>'Kategori 5','kategori6'=>'Kategori 6');
                     ?>
                                 <select onchange="document.getElementById('formkategori').submit()"  name="kategori" class="form-control my-2 p-2" class="form-control form"
                                     placeholder="KATEGORI" required>
